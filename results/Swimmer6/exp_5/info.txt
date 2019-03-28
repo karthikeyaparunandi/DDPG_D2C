@@ -1,0 +1,959 @@
+Using TensorFlow backend.
+running build_ext
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+state_input (InputLayer)     (None, 1, 16)             0         
+_________________________________________________________________
+flatten_1 (Flatten)          (None, 16)                0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 400)               6800      
+_________________________________________________________________
+activation_1 (Activation)    (None, 400)               0         
+_________________________________________________________________
+dense_2 (Dense)              (None, 300)               120300    
+_________________________________________________________________
+activation_2 (Activation)    (None, 300)               0         
+_________________________________________________________________
+dense_3 (Dense)              (None, 5)                 1505      
+_________________________________________________________________
+activation_3 (Activation)    (None, 5)                 0         
+_________________________________________________________________
+lambda_1 (Lambda)            (None, 5)                 0         
+=================================================================
+Total params: 128,605
+Trainable params: 128,605
+Non-trainable params: 0
+_________________________________________________________________
+None
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+observation_input (InputLayer)  (None, 1, 16)        0                                            
+__________________________________________________________________________________________________
+action_input (InputLayer)       (None, 5)            0                                            
+__________________________________________________________________________________________________
+flatten_2 (Flatten)             (None, 16)           0           observation_input[0][0]          
+__________________________________________________________________________________________________
+concatenate_1 (Concatenate)     (None, 21)           0           action_input[0][0]               
+                                                                 flatten_2[0][0]                  
+__________________________________________________________________________________________________
+dense_4 (Dense)                 (None, 400)          8800        concatenate_1[0][0]              
+__________________________________________________________________________________________________
+activation_4 (Activation)       (None, 400)          0           dense_4[0][0]                    
+__________________________________________________________________________________________________
+dense_5 (Dense)                 (None, 300)          120300      activation_4[0][0]               
+__________________________________________________________________________________________________
+activation_5 (Activation)       (None, 300)          0           dense_5[0][0]                    
+__________________________________________________________________________________________________
+dense_6 (Dense)                 (None, 1)            301         activation_5[0][0]               
+__________________________________________________________________________________________________
+activation_6 (Activation)       (None, 1)            0           dense_6[0][0]                    
+==================================================================================================
+Total params: 129,401
+Trainable params: 129,401
+Non-trainable params: 0
+__________________________________________________________________________________________________
+None
+2019-03-03 13:06:01.553044: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+Training for 2250000 steps ...
+Interval 1 (0 steps performed)
+10000/10000 [==============================] - 74s 7ms/step - reward: -66.8682
+6 episodes - episode_reward: -6043.218 [-6176.424, -5913.844] - loss: 34.575 - mean_squared_error: 69.150 - mean_q: -293.858 - reward_ctrl: -0.002 - reward_fwd: -66.866
+
+Interval 2 (10000 steps performed)
+10000/10000 [==============================] - 80s 8ms/step - reward: -62.0245
+7 episodes - episode_reward: -5978.629 [-6224.349, -5866.999] - loss: 212.662 - mean_squared_error: 425.324 - mean_q: -794.773 - reward_ctrl: -0.005 - reward_fwd: -62.019
+
+Interval 3 (20000 steps performed)
+10000/10000 [==============================] - 86s 9ms/step - reward: -60.4109
+7 episodes - episode_reward: -6027.251 [-6086.841, -5974.467] - loss: 509.704 - mean_squared_error: 1019.408 - mean_q: -1223.690 - reward_ctrl: -0.021 - reward_fwd: -60.390
+
+Interval 4 (30000 steps performed)
+10000/10000 [==============================] - 83s 8ms/step - reward: -62.4913
+6 episodes - episode_reward: -6028.720 [-6156.378, -5912.736] - loss: 931.171 - mean_squared_error: 1862.342 - mean_q: -1600.002 - reward_ctrl: -0.014 - reward_fwd: -62.477
+
+Interval 5 (40000 steps performed)
+10000/10000 [==============================] - 86s 9ms/step - reward: -61.1726
+7 episodes - episode_reward: -5986.014 [-6121.180, -5849.128] - loss: 1323.326 - mean_squared_error: 2646.652 - mean_q: -1929.057 - reward_ctrl: -0.006 - reward_fwd: -61.166
+
+Interval 6 (50000 steps performed)
+10000/10000 [==============================] - 87s 9ms/step - reward: -59.7260
+7 episodes - episode_reward: -5838.096 [-5942.801, -5711.118] - loss: 1711.222 - mean_squared_error: 3422.445 - mean_q: -2230.932 - reward_ctrl: -0.004 - reward_fwd: -59.722
+
+Interval 7 (60000 steps performed)
+10000/10000 [==============================] - 89s 9ms/step - reward: -61.6538
+6 episodes - episode_reward: -5806.013 [-5980.776, -5639.011] - loss: 2154.212 - mean_squared_error: 4308.424 - mean_q: -2527.520 - reward_ctrl: -0.003 - reward_fwd: -61.651
+
+Interval 8 (70000 steps performed)
+10000/10000 [==============================] - 92s 9ms/step - reward: -60.2231
+7 episodes - episode_reward: -5885.312 [-6000.651, -5832.181] - loss: 2547.024 - mean_squared_error: 5094.049 - mean_q: -2794.827 - reward_ctrl: -0.004 - reward_fwd: -60.219
+
+Interval 9 (80000 steps performed)
+10000/10000 [==============================] - 91s 9ms/step - reward: -60.7325
+7 episodes - episode_reward: -5853.749 [-6043.336, -5721.493] - loss: 3265.780 - mean_squared_error: 6531.560 - mean_q: -3032.688 - reward_ctrl: -0.005 - reward_fwd: -60.728
+
+Interval 10 (90000 steps performed)
+10000/10000 [==============================] - 95s 10ms/step - reward: -65.1084
+6 episodes - episode_reward: -5738.431 [-5859.019, -5659.734] - loss: 4128.453 - mean_squared_error: 8256.905 - mean_q: -3240.061 - reward_ctrl: -0.003 - reward_fwd: -65.105
+
+Interval 11 (100000 steps performed)
+10000/10000 [==============================] - 98s 10ms/step - reward: -69.2988
+7 episodes - episode_reward: -5749.251 [-5883.870, -5668.935] - loss: 4287.822 - mean_squared_error: 8575.644 - mean_q: -3469.346 - reward_ctrl: -0.008 - reward_fwd: -69.291
+
+Interval 12 (110000 steps performed)
+10000/10000 [==============================] - 98s 10ms/step - reward: -61.2568
+7 episodes - episode_reward: -5713.422 [-5895.819, -5595.726] - loss: 5410.605 - mean_squared_error: 10821.210 - mean_q: -3670.908 - reward_ctrl: -0.007 - reward_fwd: -61.250
+
+Interval 13 (120000 steps performed)
+10000/10000 [==============================] - 100s 10ms/step - reward: -52.2901
+6 episodes - episode_reward: -5785.473 [-5952.341, -5552.876] - loss: 5285.469 - mean_squared_error: 10570.938 - mean_q: -3809.626 - reward_ctrl: -0.004 - reward_fwd: -52.286
+
+Interval 14 (130000 steps performed)
+10000/10000 [==============================] - 104s 10ms/step - reward: -48.6963
+7 episodes - episode_reward: -5577.137 [-5701.753, -5406.802] - loss: 5157.477 - mean_squared_error: 10314.953 - mean_q: -3905.507 - reward_ctrl: -0.003 - reward_fwd: -48.693
+
+Interval 15 (140000 steps performed)
+10000/10000 [==============================] - 106s 11ms/step - reward: -52.2400
+7 episodes - episode_reward: -5616.801 [-5782.548, -5506.446] - loss: 4869.580 - mean_squared_error: 9739.160 - mean_q: -3984.520 - reward_ctrl: -0.004 - reward_fwd: -52.236
+
+Interval 16 (150000 steps performed)
+10000/10000 [==============================] - 108s 11ms/step - reward: -50.2462
+6 episodes - episode_reward: -5592.565 [-5699.093, -5462.575] - loss: 5925.203 - mean_squared_error: 11850.405 - mean_q: -4056.114 - reward_ctrl: -0.003 - reward_fwd: -50.243
+
+Interval 17 (160000 steps performed)
+10000/10000 [==============================] - 109s 11ms/step - reward: -52.1556
+7 episodes - episode_reward: -5595.981 [-5739.300, -5426.392] - loss: 5483.264 - mean_squared_error: 10966.528 - mean_q: -4112.014 - reward_ctrl: -0.004 - reward_fwd: -52.151
+
+Interval 18 (170000 steps performed)
+10000/10000 [==============================] - 111s 11ms/step - reward: -53.7919
+7 episodes - episode_reward: -5650.276 [-5798.280, -5511.272] - loss: 5989.146 - mean_squared_error: 11978.293 - mean_q: -4177.288 - reward_ctrl: -0.004 - reward_fwd: -53.788
+
+Interval 19 (180000 steps performed)
+10000/10000 [==============================] - 114s 11ms/step - reward: -53.0538
+6 episodes - episode_reward: -5638.733 [-5704.925, -5520.450] - loss: 6036.836 - mean_squared_error: 12073.673 - mean_q: -4243.789 - reward_ctrl: -0.004 - reward_fwd: -53.050
+
+Interval 20 (190000 steps performed)
+10000/10000 [==============================] - 114s 11ms/step - reward: -57.7661
+7 episodes - episode_reward: -5751.389 [-5929.089, -5494.976] - loss: 5690.502 - mean_squared_error: 11381.004 - mean_q: -4312.044 - reward_ctrl: -0.007 - reward_fwd: -57.759
+
+Interval 21 (200000 steps performed)
+10000/10000 [==============================] - 119s 12ms/step - reward: -52.0047
+7 episodes - episode_reward: -5599.872 [-5838.029, -5473.897] - loss: 7354.362 - mean_squared_error: 14708.724 - mean_q: -4375.130 - reward_ctrl: -0.005 - reward_fwd: -51.999
+
+Interval 22 (210000 steps performed)
+10000/10000 [==============================] - 119s 12ms/step - reward: -50.8420
+6 episodes - episode_reward: -5551.224 [-5728.133, -5370.794] - loss: 7723.718 - mean_squared_error: 15447.436 - mean_q: -4413.069 - reward_ctrl: -0.003 - reward_fwd: -50.839
+
+Interval 23 (220000 steps performed)
+10000/10000 [==============================] - 123s 12ms/step - reward: -53.3188
+7 episodes - episode_reward: -5534.889 [-5622.900, -5407.333] - loss: 7169.074 - mean_squared_error: 14338.148 - mean_q: -4454.853 - reward_ctrl: -0.005 - reward_fwd: -53.314
+
+Interval 24 (230000 steps performed)
+10000/10000 [==============================] - 128s 13ms/step - reward: -46.2460
+7 episodes - episode_reward: -5555.442 [-5676.859, -5439.923] - loss: 6819.092 - mean_squared_error: 13638.184 - mean_q: -4458.135 - reward_ctrl: -0.004 - reward_fwd: -46.242
+
+Interval 25 (240000 steps performed)
+10000/10000 [==============================] - 123s 12ms/step - reward: -53.1343
+6 episodes - episode_reward: -5759.339 [-6021.589, -5499.169] - loss: 6845.591 - mean_squared_error: 13691.183 - mean_q: -4470.107 - reward_ctrl: -0.009 - reward_fwd: -53.126
+
+Interval 26 (250000 steps performed)
+10000/10000 [==============================] - 126s 13ms/step - reward: -54.1961
+7 episodes - episode_reward: -5754.138 [-6346.222, -5488.447] - loss: 6294.724 - mean_squared_error: 12589.447 - mean_q: -4489.899 - reward_ctrl: -0.014 - reward_fwd: -54.182
+
+Interval 27 (260000 steps performed)
+10000/10000 [==============================] - 126s 13ms/step - reward: -55.4443
+7 episodes - episode_reward: -5981.010 [-6519.846, -5403.668] - loss: 6515.912 - mean_squared_error: 13031.824 - mean_q: -4509.611 - reward_ctrl: -0.019 - reward_fwd: -55.425
+
+Interval 28 (270000 steps performed)
+10000/10000 [==============================] - 132s 13ms/step - reward: -56.5293
+6 episodes - episode_reward: -6141.481 [-6657.126, -5644.787] - loss: 6289.471 - mean_squared_error: 12578.942 - mean_q: -4490.829 - reward_ctrl: -0.013 - reward_fwd: -56.516
+
+Interval 29 (280000 steps performed)
+10000/10000 [==============================] - 131s 13ms/step - reward: -53.1351
+7 episodes - episode_reward: -5659.824 [-5867.503, -5458.698] - loss: 6517.658 - mean_squared_error: 13035.316 - mean_q: -4489.882 - reward_ctrl: -0.005 - reward_fwd: -53.130
+
+Interval 30 (290000 steps performed)
+10000/10000 [==============================] - 141s 14ms/step - reward: -54.5460
+7 episodes - episode_reward: -5838.273 [-6146.286, -5676.477] - loss: 6784.472 - mean_squared_error: 13568.944 - mean_q: -4486.151 - reward_ctrl: -0.011 - reward_fwd: -54.535
+
+Interval 31 (300000 steps performed)
+10000/10000 [==============================] - 141s 14ms/step - reward: -47.4158
+6 episodes - episode_reward: -5732.589 [-6208.589, -5500.017] - loss: 6363.239 - mean_squared_error: 12726.479 - mean_q: -4476.456 - reward_ctrl: -0.009 - reward_fwd: -47.406
+
+Interval 32 (310000 steps performed)
+10000/10000 [==============================] - 142s 14ms/step - reward: -52.0769
+7 episodes - episode_reward: -5575.166 [-5659.475, -5432.508] - loss: 6918.662 - mean_squared_error: 13837.323 - mean_q: -4458.950 - reward_ctrl: -0.009 - reward_fwd: -52.068
+
+Interval 33 (320000 steps performed)
+10000/10000 [==============================] - 144s 14ms/step - reward: -52.6080
+7 episodes - episode_reward: -5672.302 [-5763.801, -5501.340] - loss: 6864.070 - mean_squared_error: 13728.141 - mean_q: -4433.500 - reward_ctrl: -0.009 - reward_fwd: -52.599
+
+Interval 34 (330000 steps performed)
+10000/10000 [==============================] - 158s 16ms/step - reward: -58.4533
+6 episodes - episode_reward: -5748.799 [-5902.812, -5639.275] - loss: 5691.861 - mean_squared_error: 11383.722 - mean_q: -4429.540 - reward_ctrl: -0.012 - reward_fwd: -58.441
+
+Interval 35 (340000 steps performed)
+10000/10000 [==============================] - 152s 15ms/step - reward: -56.5222
+7 episodes - episode_reward: -5645.650 [-5726.030, -5598.384] - loss: 6625.665 - mean_squared_error: 13251.329 - mean_q: -4433.199 - reward_ctrl: -0.011 - reward_fwd: -56.511
+
+Interval 36 (350000 steps performed)
+10000/10000 [==============================] - 150s 15ms/step - reward: -52.5633
+7 episodes - episode_reward: -5772.209 [-6227.869, -5497.634] - loss: 6237.705 - mean_squared_error: 12475.410 - mean_q: -4431.776 - reward_ctrl: -0.012 - reward_fwd: -52.551
+
+Interval 37 (360000 steps performed)
+10000/10000 [==============================] - 153s 15ms/step - reward: -54.0812
+6 episodes - episode_reward: -5793.825 [-6130.654, -5410.744] - loss: 6535.150 - mean_squared_error: 13070.301 - mean_q: -4400.272 - reward_ctrl: -0.008 - reward_fwd: -54.073
+
+Interval 38 (370000 steps performed)
+10000/10000 [==============================] - 154s 15ms/step - reward: -43.9743
+7 episodes - episode_reward: -5511.338 [-5824.498, -5377.825] - loss: 6089.972 - mean_squared_error: 12179.944 - mean_q: -4380.898 - reward_ctrl: -0.007 - reward_fwd: -43.967
+
+Interval 39 (380000 steps performed)
+10000/10000 [==============================] - 158s 16ms/step - reward: -41.3262
+7 episodes - episode_reward: -5475.767 [-5659.472, -5153.035] - loss: 6157.084 - mean_squared_error: 12314.169 - mean_q: -4330.993 - reward_ctrl: -0.008 - reward_fwd: -41.318
+
+Interval 40 (390000 steps performed)
+10000/10000 [==============================] - 162s 16ms/step - reward: -46.2917
+6 episodes - episode_reward: -5572.808 [-5671.662, -5495.316] - loss: 5153.087 - mean_squared_error: 10306.175 - mean_q: -4312.891 - reward_ctrl: -0.007 - reward_fwd: -46.285
+
+Interval 41 (400000 steps performed)
+10000/10000 [==============================] - 163s 16ms/step - reward: -45.7716
+7 episodes - episode_reward: -5571.756 [-5662.447, -5519.930] - loss: 6170.700 - mean_squared_error: 12341.399 - mean_q: -4303.910 - reward_ctrl: -0.007 - reward_fwd: -45.764
+
+Interval 42 (410000 steps performed)
+10000/10000 [==============================] - 163s 16ms/step - reward: -43.7347
+7 episodes - episode_reward: -5521.620 [-5851.051, -5285.043] - loss: 5875.691 - mean_squared_error: 11751.383 - mean_q: -4289.142 - reward_ctrl: -0.017 - reward_fwd: -43.718
+
+Interval 43 (420000 steps performed)
+10000/10000 [==============================] - 177s 18ms/step - reward: -50.9049
+6 episodes - episode_reward: -5654.467 [-6017.102, -5427.241] - loss: 5259.766 - mean_squared_error: 10519.532 - mean_q: -4259.607 - reward_ctrl: -0.021 - reward_fwd: -50.884
+
+Interval 44 (430000 steps performed)
+10000/10000 [==============================] - 178s 18ms/step - reward: -46.4824
+7 episodes - episode_reward: -5388.613 [-5598.654, -5263.284] - loss: 4950.831 - mean_squared_error: 9901.661 - mean_q: -4249.263 - reward_ctrl: -0.006 - reward_fwd: -46.476
+
+Interval 45 (440000 steps performed)
+10000/10000 [==============================] - 174s 17ms/step - reward: -49.2407
+7 episodes - episode_reward: -5454.721 [-5699.448, -5278.533] - loss: 5443.512 - mean_squared_error: 10887.024 - mean_q: -4251.846 - reward_ctrl: -0.012 - reward_fwd: -49.229
+
+Interval 46 (450000 steps performed)
+10000/10000 [==============================] - 171s 17ms/step - reward: -46.5564
+6 episodes - episode_reward: -5428.346 [-5743.054, -5302.702] - loss: 6889.011 - mean_squared_error: 13778.022 - mean_q: -4248.537 - reward_ctrl: -0.012 - reward_fwd: -46.545
+
+Interval 47 (460000 steps performed)
+10000/10000 [==============================] - 177s 18ms/step - reward: -40.9295
+7 episodes - episode_reward: -5506.921 [-6156.307, -5239.568] - loss: 4922.863 - mean_squared_error: 9845.726 - mean_q: -4220.962 - reward_ctrl: -0.012 - reward_fwd: -40.918
+
+Interval 48 (470000 steps performed)
+10000/10000 [==============================] - 175s 17ms/step - reward: -42.7664
+7 episodes - episode_reward: -5545.657 [-5774.138, -5274.677] - loss: 5741.792 - mean_squared_error: 11483.583 - mean_q: -4186.502 - reward_ctrl: -0.014 - reward_fwd: -42.753
+
+Interval 49 (480000 steps performed)
+10000/10000 [==============================] - 179s 18ms/step - reward: -42.7828
+6 episodes - episode_reward: -5361.495 [-5712.356, -5103.623] - loss: 5865.937 - mean_squared_error: 11731.874 - mean_q: -4158.761 - reward_ctrl: -0.012 - reward_fwd: -42.771
+
+Interval 50 (490000 steps performed)
+10000/10000 [==============================] - 196s 20ms/step - reward: -35.6293
+7 episodes - episode_reward: -5378.251 [-5497.565, -5207.560] - loss: 4795.984 - mean_squared_error: 9591.969 - mean_q: -4119.461 - reward_ctrl: -0.014 - reward_fwd: -35.616
+
+Interval 51 (500000 steps performed)
+10000/10000 [==============================] - 193s 19ms/step - reward: -44.3370
+7 episodes - episode_reward: -5423.323 [-5878.970, -5018.184] - loss: 5031.034 - mean_squared_error: 10062.068 - mean_q: -4063.737 - reward_ctrl: -0.022 - reward_fwd: -44.315
+
+Interval 52 (510000 steps performed)
+10000/10000 [==============================] - 189s 19ms/step - reward: -39.2186
+6 episodes - episode_reward: -5270.340 [-5422.542, -4943.023] - loss: 5948.239 - mean_squared_error: 11896.478 - mean_q: -4031.914 - reward_ctrl: -0.025 - reward_fwd: -39.193
+
+Interval 53 (520000 steps performed)
+10000/10000 [==============================] - 208s 21ms/step - reward: -50.7531
+7 episodes - episode_reward: -5745.838 [-6156.510, -5212.522] - loss: 4913.615 - mean_squared_error: 9827.230 - mean_q: -4002.055 - reward_ctrl: -0.024 - reward_fwd: -50.729
+
+Interval 54 (530000 steps performed)
+10000/10000 [==============================] - 210s 21ms/step - reward: -46.0365
+7 episodes - episode_reward: -5571.296 [-5847.675, -5228.587] - loss: 4811.861 - mean_squared_error: 9623.723 - mean_q: -3994.727 - reward_ctrl: -0.031 - reward_fwd: -46.005
+
+Interval 55 (540000 steps performed)
+10000/10000 [==============================] - 197s 20ms/step - reward: -38.3983
+6 episodes - episode_reward: -5280.810 [-5632.484, -4927.690] - loss: 4351.162 - mean_squared_error: 8702.324 - mean_q: -3940.390 - reward_ctrl: -0.014 - reward_fwd: -38.384
+
+Interval 56 (550000 steps performed)
+10000/10000 [==============================] - 193s 19ms/step - reward: -46.0899
+7 episodes - episode_reward: -5486.933 [-5680.570, -4975.858] - loss: 4629.625 - mean_squared_error: 9259.250 - mean_q: -3900.474 - reward_ctrl: -0.032 - reward_fwd: -46.058
+
+Interval 57 (560000 steps performed)
+10000/10000 [==============================] - 195s 19ms/step - reward: -43.1028
+7 episodes - episode_reward: -5623.884 [-6549.057, -5006.959] - loss: 4966.916 - mean_squared_error: 9933.831 - mean_q: -3863.903 - reward_ctrl: -0.037 - reward_fwd: -43.066
+
+Interval 58 (570000 steps performed)
+10000/10000 [==============================] - 209s 21ms/step - reward: -42.1796
+6 episodes - episode_reward: -5363.873 [-5736.154, -5149.328] - loss: 4468.293 - mean_squared_error: 8936.587 - mean_q: -3873.340 - reward_ctrl: -0.031 - reward_fwd: -42.149
+
+Interval 59 (580000 steps performed)
+10000/10000 [==============================] - 210s 21ms/step - reward: -44.2115
+7 episodes - episode_reward: -5496.873 [-5726.280, -5267.130] - loss: 4151.133 - mean_squared_error: 8302.266 - mean_q: -3862.172 - reward_ctrl: -0.024 - reward_fwd: -44.187
+
+Interval 60 (590000 steps performed)
+10000/10000 [==============================] - 217s 22ms/step - reward: -37.4465
+7 episodes - episode_reward: -5430.242 [-5542.706, -5263.728] - loss: 4684.212 - mean_squared_error: 9368.424 - mean_q: -3831.392 - reward_ctrl: -0.020 - reward_fwd: -37.427
+
+Interval 61 (600000 steps performed)
+10000/10000 [==============================] - 221s 22ms/step - reward: -53.7318
+6 episodes - episode_reward: -5668.402 [-6321.143, -5406.154] - loss: 3602.995 - mean_squared_error: 7205.990 - mean_q: -3795.620 - reward_ctrl: -0.031 - reward_fwd: -53.701
+
+Interval 62 (610000 steps performed)
+10000/10000 [==============================] - 230s 23ms/step - reward: -32.2858
+7 episodes - episode_reward: -5177.595 [-5488.895, -4968.231] - loss: 4729.598 - mean_squared_error: 9459.195 - mean_q: -3773.488 - reward_ctrl: -0.014 - reward_fwd: -32.272
+
+Interval 63 (620000 steps performed)
+10000/10000 [==============================] - 219s 22ms/step - reward: -35.1771
+7 episodes - episode_reward: -5095.029 [-5312.175, -4894.864] - loss: 3892.546 - mean_squared_error: 7785.091 - mean_q: -3732.924 - reward_ctrl: -0.022 - reward_fwd: -35.155
+
+Interval 64 (630000 steps performed)
+10000/10000 [==============================] - 220s 22ms/step - reward: -34.0663
+6 episodes - episode_reward: -5001.755 [-5088.022, -4909.547] - loss: 4131.127 - mean_squared_error: 8262.254 - mean_q: -3690.968 - reward_ctrl: -0.022 - reward_fwd: -34.044
+
+Interval 65 (640000 steps performed)
+10000/10000 [==============================] - 221s 22ms/step - reward: -31.4916
+7 episodes - episode_reward: -5080.478 [-5418.768, -4815.619] - loss: 4109.508 - mean_squared_error: 8219.017 - mean_q: -3647.350 - reward_ctrl: -0.030 - reward_fwd: -31.461
+
+Interval 66 (650000 steps performed)
+10000/10000 [==============================] - 213s 21ms/step - reward: -40.5382
+7 episodes - episode_reward: -5242.768 [-5629.892, -4989.852] - loss: 3821.873 - mean_squared_error: 7643.746 - mean_q: -3604.201 - reward_ctrl: -0.054 - reward_fwd: -40.484
+
+Interval 67 (660000 steps performed)
+10000/10000 [==============================] - 217s 22ms/step - reward: -49.0073
+6 episodes - episode_reward: -5483.086 [-5964.589, -5069.796] - loss: 4155.368 - mean_squared_error: 8310.735 - mean_q: -3592.520 - reward_ctrl: -0.064 - reward_fwd: -48.943
+
+Interval 68 (670000 steps performed)
+10000/10000 [==============================] - 219s 22ms/step - reward: -52.9966
+7 episodes - episode_reward: -5661.136 [-6174.735, -5294.081] - loss: 4382.595 - mean_squared_error: 8765.189 - mean_q: -3589.807 - reward_ctrl: -0.068 - reward_fwd: -52.929
+
+Interval 69 (680000 steps performed)
+10000/10000 [==============================] - 221s 22ms/step - reward: -33.9734
+7 episodes - episode_reward: -4951.972 [-5265.284, -4635.020] - loss: 4028.437 - mean_squared_error: 8056.874 - mean_q: -3592.267 - reward_ctrl: -0.027 - reward_fwd: -33.946
+
+Interval 70 (690000 steps performed)
+10000/10000 [==============================] - 225s 22ms/step - reward: -30.0219
+6 episodes - episode_reward: -5090.080 [-5675.725, -4700.741] - loss: 4169.154 - mean_squared_error: 8338.309 - mean_q: -3571.996 - reward_ctrl: -0.029 - reward_fwd: -29.993
+
+Interval 71 (700000 steps performed)
+10000/10000 [==============================] - 221s 22ms/step - reward: -45.5503
+7 episodes - episode_reward: -5406.190 [-5675.764, -5009.452] - loss: 4186.428 - mean_squared_error: 8372.855 - mean_q: -3557.006 - reward_ctrl: -0.069 - reward_fwd: -45.482
+
+Interval 72 (710000 steps performed)
+10000/10000 [==============================] - 223s 22ms/step - reward: -35.1707
+7 episodes - episode_reward: -5446.008 [-5843.033, -4997.153] - loss: 3806.388 - mean_squared_error: 7612.776 - mean_q: -3546.942 - reward_ctrl: -0.059 - reward_fwd: -35.112
+
+Interval 73 (720000 steps performed)
+10000/10000 [==============================] - 223s 22ms/step - reward: -35.1866
+6 episodes - episode_reward: -5236.918 [-6745.474, -4536.765] - loss: 3615.258 - mean_squared_error: 7230.517 - mean_q: -3503.844 - reward_ctrl: -0.043 - reward_fwd: -35.143
+
+Interval 74 (730000 steps performed)
+10000/10000 [==============================] - 228s 23ms/step - reward: -33.6353
+7 episodes - episode_reward: -5204.004 [-5381.524, -4982.294] - loss: 3664.127 - mean_squared_error: 7328.253 - mean_q: -3483.394 - reward_ctrl: -0.049 - reward_fwd: -33.586
+
+Interval 75 (740000 steps performed)
+10000/10000 [==============================] - 236s 24ms/step - reward: -27.0057
+7 episodes - episode_reward: -5017.680 [-5518.931, -4707.535] - loss: 3916.222 - mean_squared_error: 7832.443 - mean_q: -3451.227 - reward_ctrl: -0.033 - reward_fwd: -26.972
+
+Interval 76 (750000 steps performed)
+10000/10000 [==============================] - 231s 23ms/step - reward: -31.1199
+6 episodes - episode_reward: -5107.690 [-6214.155, -4650.619] - loss: 3391.724 - mean_squared_error: 6783.448 - mean_q: -3413.597 - reward_ctrl: -0.036 - reward_fwd: -31.084
+
+Interval 77 (760000 steps performed)
+10000/10000 [==============================] - 234s 23ms/step - reward: -34.3861
+7 episodes - episode_reward: -4940.751 [-5062.771, -4831.353] - loss: 3579.654 - mean_squared_error: 7159.308 - mean_q: -3384.348 - reward_ctrl: -0.042 - reward_fwd: -34.344
+
+Interval 78 (770000 steps performed)
+10000/10000 [==============================] - 239s 24ms/step - reward: -36.6824
+7 episodes - episode_reward: -5131.544 [-5335.871, -4964.877] - loss: 3696.781 - mean_squared_error: 7393.562 - mean_q: -3374.521 - reward_ctrl: -0.069 - reward_fwd: -36.613
+
+Interval 79 (780000 steps performed)
+10000/10000 [==============================] - 251s 25ms/step - reward: -37.6324
+6 episodes - episode_reward: -5162.952 [-5422.482, -4771.585] - loss: 3894.307 - mean_squared_error: 7788.614 - mean_q: -3364.989 - reward_ctrl: -0.067 - reward_fwd: -37.565
+
+Interval 80 (790000 steps performed)
+10000/10000 [==============================] - 267s 27ms/step - reward: -29.7181
+7 episodes - episode_reward: -5107.865 [-5355.338, -4920.694] - loss: 3462.355 - mean_squared_error: 6924.710 - mean_q: -3361.380 - reward_ctrl: -0.051 - reward_fwd: -29.667
+
+Interval 81 (800000 steps performed)
+10000/10000 [==============================] - 291s 29ms/step - reward: -27.3589
+7 episodes - episode_reward: -4850.725 [-5471.309, -4403.552] - loss: 3982.432 - mean_squared_error: 7964.865 - mean_q: -3354.881 - reward_ctrl: -0.041 - reward_fwd: -27.318
+
+Interval 82 (810000 steps performed)
+10000/10000 [==============================] - 295s 29ms/step - reward: -30.5205
+6 episodes - episode_reward: -4986.695 [-5394.110, -4707.061] - loss: 3632.461 - mean_squared_error: 7264.922 - mean_q: -3333.826 - reward_ctrl: -0.057 - reward_fwd: -30.463
+
+Interval 83 (820000 steps performed)
+10000/10000 [==============================] - 289s 29ms/step - reward: -26.9042
+7 episodes - episode_reward: -4851.847 [-5124.150, -4616.231] - loss: 3298.905 - mean_squared_error: 6597.811 - mean_q: -3318.569 - reward_ctrl: -0.049 - reward_fwd: -26.855
+
+Interval 84 (830000 steps performed)
+10000/10000 [==============================] - 311s 31ms/step - reward: -25.0008
+7 episodes - episode_reward: -4637.328 [-4790.013, -4427.392] - loss: 3392.396 - mean_squared_error: 6784.793 - mean_q: -3283.071 - reward_ctrl: -0.053 - reward_fwd: -24.947
+
+Interval 85 (840000 steps performed)
+10000/10000 [==============================] - 309s 31ms/step - reward: -27.0730
+6 episodes - episode_reward: -4661.513 [-5056.584, -4297.006] - loss: 3297.883 - mean_squared_error: 6595.767 - mean_q: -3248.449 - reward_ctrl: -0.078 - reward_fwd: -26.995
+
+Interval 86 (850000 steps performed)
+10000/10000 [==============================] - 338s 34ms/step - reward: -27.5241
+7 episodes - episode_reward: -4985.576 [-5557.985, -4522.473] - loss: 3013.244 - mean_squared_error: 6026.487 - mean_q: -3216.377 - reward_ctrl: -0.076 - reward_fwd: -27.448
+
+Interval 87 (860000 steps performed)
+10000/10000 [==============================] - 299s 30ms/step - reward: -27.2249
+7 episodes - episode_reward: -4944.250 [-5434.747, -4668.455] - loss: 3242.955 - mean_squared_error: 6485.910 - mean_q: -3195.605 - reward_ctrl: -0.093 - reward_fwd: -27.132
+
+Interval 88 (870000 steps performed)
+10000/10000 [==============================] - 316s 32ms/step - reward: -23.0424
+6 episodes - episode_reward: -4579.201 [-4750.553, -4396.500] - loss: 3495.804 - mean_squared_error: 6991.609 - mean_q: -3180.760 - reward_ctrl: -0.046 - reward_fwd: -22.996
+
+Interval 89 (880000 steps performed)
+10000/10000 [==============================] - 317s 32ms/step - reward: -23.1904
+7 episodes - episode_reward: -4660.923 [-5095.872, -4337.457] - loss: 3177.375 - mean_squared_error: 6354.751 - mean_q: -3152.622 - reward_ctrl: -0.053 - reward_fwd: -23.138
+
+Interval 90 (890000 steps performed)
+10000/10000 [==============================] - 309s 31ms/step - reward: -25.2871
+7 episodes - episode_reward: -5052.830 [-5526.278, -4660.850] - loss: 3357.221 - mean_squared_error: 6714.441 - mean_q: -3129.261 - reward_ctrl: -0.056 - reward_fwd: -25.232
+
+Interval 91 (900000 steps performed)
+10000/10000 [==============================] - 309s 31ms/step - reward: -24.7752
+6 episodes - episode_reward: -4685.537 [-4892.389, -4492.303] - loss: 2998.792 - mean_squared_error: 5997.583 - mean_q: -3106.386 - reward_ctrl: -0.055 - reward_fwd: -24.720
+
+Interval 92 (910000 steps performed)
+10000/10000 [==============================] - 270s 27ms/step - reward: -21.2692
+7 episodes - episode_reward: -4583.598 [-4831.927, -4374.966] - loss: 3060.916 - mean_squared_error: 6121.833 - mean_q: -3074.037 - reward_ctrl: -0.053 - reward_fwd: -21.216
+
+Interval 93 (920000 steps performed)
+10000/10000 [==============================] - 273s 27ms/step - reward: -20.4721
+7 episodes - episode_reward: -4574.468 [-4740.169, -4455.995] - loss: 2867.301 - mean_squared_error: 5734.601 - mean_q: -3040.800 - reward_ctrl: -0.049 - reward_fwd: -20.423
+
+Interval 94 (930000 steps performed)
+10000/10000 [==============================] - 269s 27ms/step - reward: -18.3715
+6 episodes - episode_reward: -4591.141 [-5012.313, -4231.702] - loss: 3285.678 - mean_squared_error: 6571.355 - mean_q: -3025.014 - reward_ctrl: -0.052 - reward_fwd: -18.319
+
+Interval 95 (940000 steps performed)
+10000/10000 [==============================] - 290s 29ms/step - reward: -19.4316
+7 episodes - episode_reward: -4447.302 [-5017.589, -4250.905] - loss: 2709.443 - mean_squared_error: 5418.886 - mean_q: -2995.266 - reward_ctrl: -0.062 - reward_fwd: -19.370
+
+Interval 96 (950000 steps performed)
+10000/10000 [==============================] - 287s 29ms/step - reward: -15.9818
+7 episodes - episode_reward: -4497.373 [-4656.252, -4361.708] - loss: 2832.183 - mean_squared_error: 5664.366 - mean_q: -2953.141 - reward_ctrl: -0.075 - reward_fwd: -15.907
+
+Interval 97 (960000 steps performed)
+10000/10000 [==============================] - 285s 29ms/step - reward: -18.1789
+6 episodes - episode_reward: -4577.301 [-4765.068, -4421.756] - loss: 2517.766 - mean_squared_error: 5035.532 - mean_q: -2918.353 - reward_ctrl: -0.091 - reward_fwd: -18.088
+
+Interval 98 (970000 steps performed)
+10000/10000 [==============================] - 303s 30ms/step - reward: -15.3250
+7 episodes - episode_reward: -4629.772 [-4892.625, -4256.895] - loss: 2549.249 - mean_squared_error: 5098.499 - mean_q: -2902.667 - reward_ctrl: -0.068 - reward_fwd: -15.257
+
+Interval 99 (980000 steps performed)
+10000/10000 [==============================] - 292s 29ms/step - reward: -18.9106
+7 episodes - episode_reward: -4500.081 [-4713.092, -4304.417] - loss: 2414.751 - mean_squared_error: 4829.501 - mean_q: -2871.025 - reward_ctrl: -0.064 - reward_fwd: -18.847
+
+Interval 100 (990000 steps performed)
+10000/10000 [==============================] - 314s 31ms/step - reward: -20.1320
+6 episodes - episode_reward: -4555.712 [-4885.591, -4258.746] - loss: 2615.167 - mean_squared_error: 5230.334 - mean_q: -2825.133 - reward_ctrl: -0.073 - reward_fwd: -20.059
+
+Interval 101 (1000000 steps performed)
+10000/10000 [==============================] - 304s 30ms/step - reward: -24.6256
+7 episodes - episode_reward: -4892.347 [-5407.153, -4539.451] - loss: 2819.550 - mean_squared_error: 5639.101 - mean_q: -2798.275 - reward_ctrl: -0.116 - reward_fwd: -24.510
+
+Interval 102 (1010000 steps performed)
+10000/10000 [==============================] - 291s 29ms/step - reward: -18.1221
+7 episodes - episode_reward: -4376.618 [-4708.780, -4260.906] - loss: 2684.554 - mean_squared_error: 5369.108 - mean_q: -2788.317 - reward_ctrl: -0.094 - reward_fwd: -18.028
+
+Interval 103 (1020000 steps performed)
+10000/10000 [==============================] - 297s 30ms/step - reward: -18.7721
+6 episodes - episode_reward: -4601.688 [-4924.837, -4364.329] - loss: 2674.722 - mean_squared_error: 5349.443 - mean_q: -2764.104 - reward_ctrl: -0.097 - reward_fwd: -18.675
+
+Interval 104 (1030000 steps performed)
+10000/10000 [==============================] - 297s 30ms/step - reward: -12.6045
+7 episodes - episode_reward: -4330.637 [-4476.178, -4247.752] - loss: 2515.091 - mean_squared_error: 5030.183 - mean_q: -2738.115 - reward_ctrl: -0.071 - reward_fwd: -12.533
+
+Interval 105 (1040000 steps performed)
+10000/10000 [==============================] - 305s 31ms/step - reward: -14.0048
+7 episodes - episode_reward: -4349.405 [-4571.464, -4160.045] - loss: 2468.035 - mean_squared_error: 4936.069 - mean_q: -2709.346 - reward_ctrl: -0.064 - reward_fwd: -13.940
+
+Interval 106 (1050000 steps performed)
+10000/10000 [==============================] - 309s 31ms/step - reward: -14.1821
+6 episodes - episode_reward: -4302.271 [-4425.878, -4145.226] - loss: 2099.324 - mean_squared_error: 4198.648 - mean_q: -2694.503 - reward_ctrl: -0.059 - reward_fwd: -14.124
+
+Interval 107 (1060000 steps performed)
+10000/10000 [==============================] - 307s 31ms/step - reward: -17.6256
+7 episodes - episode_reward: -4341.479 [-4766.804, -4229.053] - loss: 2667.087 - mean_squared_error: 5334.174 - mean_q: -2679.216 - reward_ctrl: -0.057 - reward_fwd: -17.568
+
+Interval 108 (1070000 steps performed)
+10000/10000 [==============================] - 310s 31ms/step - reward: -14.7602
+7 episodes - episode_reward: -4284.662 [-4465.302, -4173.902] - loss: 2236.785 - mean_squared_error: 4473.569 - mean_q: -2666.460 - reward_ctrl: -0.079 - reward_fwd: -14.681
+
+Interval 109 (1080000 steps performed)
+10000/10000 [==============================] - 308s 31ms/step - reward: -11.8722
+6 episodes - episode_reward: -4325.030 [-4545.665, -4135.236] - loss: 2090.490 - mean_squared_error: 4180.979 - mean_q: -2636.820 - reward_ctrl: -0.066 - reward_fwd: -11.806
+
+Interval 110 (1090000 steps performed)
+10000/10000 [==============================] - 306s 31ms/step - reward: -13.0174
+7 episodes - episode_reward: -4240.940 [-4369.950, -4058.088] - loss: 2400.618 - mean_squared_error: 4801.236 - mean_q: -2614.839 - reward_ctrl: -0.064 - reward_fwd: -12.953
+
+Interval 111 (1100000 steps performed)
+10000/10000 [==============================] - 320s 32ms/step - reward: -10.5909
+7 episodes - episode_reward: -4375.989 [-4722.291, -4167.831] - loss: 2139.034 - mean_squared_error: 4278.068 - mean_q: -2594.897 - reward_ctrl: -0.060 - reward_fwd: -10.531
+
+Interval 112 (1110000 steps performed)
+10000/10000 [==============================] - 420s 42ms/step - reward: -13.5906
+6 episodes - episode_reward: -4280.096 [-4490.590, -4107.956] - loss: 2225.137 - mean_squared_error: 4450.275 - mean_q: -2573.528 - reward_ctrl: -0.053 - reward_fwd: -13.538
+
+Interval 113 (1120000 steps performed)
+10000/10000 [==============================] - 326s 33ms/step - reward: -16.0147
+7 episodes - episode_reward: -4242.114 [-4548.601, -4091.344] - loss: 2155.889 - mean_squared_error: 4311.778 - mean_q: -2551.659 - reward_ctrl: -0.055 - reward_fwd: -15.960
+
+Interval 114 (1130000 steps performed)
+10000/10000 [==============================] - 338s 34ms/step - reward: -11.5920
+7 episodes - episode_reward: -4181.740 [-4280.771, -4061.579] - loss: 2368.755 - mean_squared_error: 4737.510 - mean_q: -2530.908 - reward_ctrl: -0.046 - reward_fwd: -11.546
+
+Interval 115 (1140000 steps performed)
+10000/10000 [==============================] - 347s 35ms/step - reward: -10.7522
+6 episodes - episode_reward: -4106.964 [-4198.413, -4035.992] - loss: 2192.561 - mean_squared_error: 4385.121 - mean_q: -2495.675 - reward_ctrl: -0.053 - reward_fwd: -10.699
+
+Interval 116 (1150000 steps performed)
+10000/10000 [==============================] - 360s 36ms/step - reward: -11.0082
+7 episodes - episode_reward: -4194.838 [-4326.509, -3937.998] - loss: 1992.167 - mean_squared_error: 3984.335 - mean_q: -2453.818 - reward_ctrl: -0.069 - reward_fwd: -10.939
+
+Interval 117 (1160000 steps performed)
+10000/10000 [==============================] - 361s 36ms/step - reward: -11.2862
+7 episodes - episode_reward: -4195.792 [-4295.879, -4086.599] - loss: 1970.610 - mean_squared_error: 3941.220 - mean_q: -2435.231 - reward_ctrl: -0.085 - reward_fwd: -11.201
+
+Interval 118 (1170000 steps performed)
+10000/10000 [==============================] - 362s 36ms/step - reward: -12.4472
+6 episodes - episode_reward: -4349.727 [-4505.565, -4175.015] - loss: 2146.353 - mean_squared_error: 4292.705 - mean_q: -2424.591 - reward_ctrl: -0.092 - reward_fwd: -12.355
+
+Interval 119 (1180000 steps performed)
+10000/10000 [==============================] - 386s 39ms/step - reward: -10.1058
+7 episodes - episode_reward: -4110.312 [-4179.091, -4056.966] - loss: 1322.246 - mean_squared_error: 2644.493 - mean_q: -2407.337 - reward_ctrl: -0.106 - reward_fwd: -10.000
+
+Interval 120 (1190000 steps performed)
+10000/10000 [==============================] - 397s 40ms/step - reward: -8.1508
+7 episodes - episode_reward: -4173.923 [-4353.980, -4056.084] - loss: 1842.187 - mean_squared_error: 3684.374 - mean_q: -2391.511 - reward_ctrl: -0.070 - reward_fwd: -8.081
+
+Interval 121 (1200000 steps performed)
+10000/10000 [==============================] - 418s 42ms/step - reward: -9.0329
+6 episodes - episode_reward: -4134.492 [-4226.198, -4014.773] - loss: 1719.724 - mean_squared_error: 3439.448 - mean_q: -2362.740 - reward_ctrl: -0.088 - reward_fwd: -8.945
+
+Interval 122 (1210000 steps performed)
+10000/10000 [==============================] - 467s 47ms/step - reward: -10.9233
+7 episodes - episode_reward: -4124.611 [-4252.810, -4015.723] - loss: 1705.499 - mean_squared_error: 3410.998 - mean_q: -2349.805 - reward_ctrl: -0.103 - reward_fwd: -10.820
+
+Interval 123 (1220000 steps performed)
+10000/10000 [==============================] - 464s 46ms/step - reward: -9.1245
+7 episodes - episode_reward: -4106.146 [-4199.687, -3980.297] - loss: 1952.384 - mean_squared_error: 3904.768 - mean_q: -2329.039 - reward_ctrl: -0.082 - reward_fwd: -9.043
+
+Interval 124 (1230000 steps performed)
+10000/10000 [==============================] - 427s 43ms/step - reward: -11.3313
+6 episodes - episode_reward: -4248.604 [-4434.499, -4101.172] - loss: 1911.823 - mean_squared_error: 3823.645 - mean_q: -2312.080 - reward_ctrl: -0.113 - reward_fwd: -11.218
+
+Interval 125 (1240000 steps performed)
+10000/10000 [==============================] - 347s 35ms/step - reward: -18.0786
+7 episodes - episode_reward: -4347.382 [-4508.154, -4200.379] - loss: 2254.353 - mean_squared_error: 4508.707 - mean_q: -2298.531 - reward_ctrl: -0.138 - reward_fwd: -17.941
+
+Interval 126 (1250000 steps performed)
+10000/10000 [==============================] - 349s 35ms/step - reward: -13.5360
+7 episodes - episode_reward: -4359.471 [-4606.777, -4155.082] - loss: 2129.748 - mean_squared_error: 4259.497 - mean_q: -2281.546 - reward_ctrl: -0.088 - reward_fwd: -13.448
+
+Interval 127 (1260000 steps performed)
+10000/10000 [==============================] - 349s 35ms/step - reward: -11.4003
+6 episodes - episode_reward: -4281.526 [-4496.907, -4101.838] - loss: 2006.856 - mean_squared_error: 4013.712 - mean_q: -2262.054 - reward_ctrl: -0.083 - reward_fwd: -11.317
+
+Interval 128 (1270000 steps performed)
+10000/10000 [==============================] - 355s 35ms/step - reward: -9.7674
+7 episodes - episode_reward: -4189.148 [-4354.276, -4074.726] - loss: 1808.785 - mean_squared_error: 3617.571 - mean_q: -2242.733 - reward_ctrl: -0.084 - reward_fwd: -9.683
+
+Interval 129 (1280000 steps performed)
+10000/10000 [==============================] - 351s 35ms/step - reward: -8.2492
+7 episodes - episode_reward: -4127.563 [-4193.676, -4020.783] - loss: 1744.617 - mean_squared_error: 3489.233 - mean_q: -2210.625 - reward_ctrl: -0.060 - reward_fwd: -8.189
+
+Interval 130 (1290000 steps performed)
+10000/10000 [==============================] - 356s 36ms/step - reward: -8.7910
+6 episodes - episode_reward: -4095.925 [-4211.462, -3985.576] - loss: 1263.311 - mean_squared_error: 2526.621 - mean_q: -2194.999 - reward_ctrl: -0.083 - reward_fwd: -8.708
+
+Interval 131 (1300000 steps performed)
+10000/10000 [==============================] - 363s 36ms/step - reward: -11.8935
+7 episodes - episode_reward: -4184.902 [-4372.037, -4004.846] - loss: 1623.186 - mean_squared_error: 3246.373 - mean_q: -2175.309 - reward_ctrl: -0.129 - reward_fwd: -11.764
+
+Interval 132 (1310000 steps performed)
+10000/10000 [==============================] - 364s 36ms/step - reward: -7.4744
+7 episodes - episode_reward: -4094.481 [-4261.464, -3958.274] - loss: 1580.712 - mean_squared_error: 3161.424 - mean_q: -2163.975 - reward_ctrl: -0.081 - reward_fwd: -7.393
+
+Interval 133 (1320000 steps performed)
+10000/10000 [==============================] - 371s 37ms/step - reward: -9.9398
+6 episodes - episode_reward: -4067.250 [-4150.622, -3908.682] - loss: 1700.129 - mean_squared_error: 3400.258 - mean_q: -2153.778 - reward_ctrl: -0.113 - reward_fwd: -9.827
+
+Interval 134 (1330000 steps performed)
+10000/10000 [==============================] - 374s 37ms/step - reward: -8.3725
+7 episodes - episode_reward: -4058.909 [-4201.361, -3914.084] - loss: 1771.665 - mean_squared_error: 3543.329 - mean_q: -2134.048 - reward_ctrl: -0.124 - reward_fwd: -8.249
+
+Interval 135 (1340000 steps performed)
+10000/10000 [==============================] - 372s 37ms/step - reward: -8.9388
+7 episodes - episode_reward: -4004.678 [-4100.945, -3956.938] - loss: 1648.714 - mean_squared_error: 3297.428 - mean_q: -2118.118 - reward_ctrl: -0.134 - reward_fwd: -8.805
+
+Interval 136 (1350000 steps performed)
+10000/10000 [==============================] - 375s 38ms/step - reward: -9.3711
+6 episodes - episode_reward: -4021.859 [-4149.258, -3923.799] - loss: 1793.498 - mean_squared_error: 3586.997 - mean_q: -2104.832 - reward_ctrl: -0.127 - reward_fwd: -9.244
+
+Interval 137 (1360000 steps performed)
+10000/10000 [==============================] - 381s 38ms/step - reward: -8.2736
+7 episodes - episode_reward: -4046.310 [-4229.311, -3947.441] - loss: 1557.494 - mean_squared_error: 3114.988 - mean_q: -2090.212 - reward_ctrl: -0.120 - reward_fwd: -8.153
+
+Interval 138 (1370000 steps performed)
+10000/10000 [==============================] - 449s 45ms/step - reward: -14.2241
+7 episodes - episode_reward: -4314.278 [-4877.623, -3973.610] - loss: 1295.956 - mean_squared_error: 2591.912 - mean_q: -2080.188 - reward_ctrl: -0.139 - reward_fwd: -14.085
+
+Interval 139 (1380000 steps performed)
+10000/10000 [==============================] - 479s 48ms/step - reward: -8.6582
+6 episodes - episode_reward: -4173.515 [-4369.415, -4079.504] - loss: 1406.784 - mean_squared_error: 2813.568 - mean_q: -2073.263 - reward_ctrl: -0.097 - reward_fwd: -8.561
+
+Interval 140 (1390000 steps performed)
+10000/10000 [==============================] - 493s 49ms/step - reward: -10.0626
+7 episodes - episode_reward: -4024.389 [-4156.508, -3954.728] - loss: 1775.698 - mean_squared_error: 3551.395 - mean_q: -2067.275 - reward_ctrl: -0.119 - reward_fwd: -9.943
+
+Interval 141 (1400000 steps performed)
+10000/10000 [==============================] - 462s 46ms/step - reward: -9.2634
+7 episodes - episode_reward: -4080.063 [-4150.982, -3976.468] - loss: 1619.849 - mean_squared_error: 3239.698 - mean_q: -2052.659 - reward_ctrl: -0.137 - reward_fwd: -9.127
+
+Interval 142 (1410000 steps performed)
+10000/10000 [==============================] - 415s 42ms/step - reward: -8.7141
+6 episodes - episode_reward: -4115.485 [-4286.324, -3967.956] - loss: 1459.346 - mean_squared_error: 2918.691 - mean_q: -2041.687 - reward_ctrl: -0.134 - reward_fwd: -8.580
+
+Interval 143 (1420000 steps performed)
+10000/10000 [==============================] - 403s 40ms/step - reward: -16.0736
+7 episodes - episode_reward: -4005.014 [-4089.296, -3950.356] - loss: 1751.234 - mean_squared_error: 3502.468 - mean_q: -2031.605 - reward_ctrl: -0.117 - reward_fwd: -15.957
+
+Interval 144 (1430000 steps performed)
+10000/10000 [==============================] - 401s 40ms/step - reward: -9.7314
+7 episodes - episode_reward: -4127.098 [-4214.595, -4008.936] - loss: 1663.617 - mean_squared_error: 3327.235 - mean_q: -2018.431 - reward_ctrl: -0.122 - reward_fwd: -9.610
+
+Interval 145 (1440000 steps performed)
+10000/10000 [==============================] - 510s 51ms/step - reward: -8.2260
+6 episodes - episode_reward: -4076.242 [-4098.686, -4009.074] - loss: 1379.257 - mean_squared_error: 2758.515 - mean_q: -2003.254 - reward_ctrl: -0.110 - reward_fwd: -8.116
+
+Interval 146 (1450000 steps performed)
+10000/10000 [==============================] - 470s 47ms/step - reward: -10.8034
+7 episodes - episode_reward: -4059.577 [-4262.662, -3912.854] - loss: 1483.323 - mean_squared_error: 2966.646 - mean_q: -1991.165 - reward_ctrl: -0.095 - reward_fwd: -10.709
+
+Interval 147 (1460000 steps performed)
+10000/10000 [==============================] - 449s 45ms/step - reward: -9.0477
+7 episodes - episode_reward: -4088.470 [-4228.790, -3927.089] - loss: 1927.997 - mean_squared_error: 3855.994 - mean_q: -1977.205 - reward_ctrl: -0.098 - reward_fwd: -8.949
+
+Interval 148 (1470000 steps performed)
+10000/10000 [==============================] - 427s 43ms/step - reward: -9.2446
+6 episodes - episode_reward: -4047.574 [-4342.804, -3907.511] - loss: 1339.838 - mean_squared_error: 2679.677 - mean_q: -1976.845 - reward_ctrl: -0.093 - reward_fwd: -9.151
+
+Interval 149 (1480000 steps performed)
+10000/10000 [==============================] - 427s 43ms/step - reward: -10.0566
+7 episodes - episode_reward: -4063.063 [-4132.194, -3996.142] - loss: 1356.085 - mean_squared_error: 2712.171 - mean_q: -1954.420 - reward_ctrl: -0.115 - reward_fwd: -9.941
+
+Interval 150 (1490000 steps performed)
+10000/10000 [==============================] - 436s 44ms/step - reward: -8.4435
+7 episodes - episode_reward: -4148.806 [-4247.695, -3999.967] - loss: 1528.837 - mean_squared_error: 3057.675 - mean_q: -1944.844 - reward_ctrl: -0.158 - reward_fwd: -8.285
+
+Interval 151 (1500000 steps performed)
+10000/10000 [==============================] - 451s 45ms/step - reward: -7.8680
+6 episodes - episode_reward: -4048.474 [-4185.638, -3951.872] - loss: 1509.305 - mean_squared_error: 3018.610 - mean_q: -1934.412 - reward_ctrl: -0.177 - reward_fwd: -7.691
+
+Interval 152 (1510000 steps performed)
+10000/10000 [==============================] - 450s 45ms/step - reward: -10.3607
+7 episodes - episode_reward: -4165.598 [-4499.065, -3952.422] - loss: 1772.149 - mean_squared_error: 3544.297 - mean_q: -1919.870 - reward_ctrl: -0.175 - reward_fwd: -10.186
+
+Interval 153 (1520000 steps performed)
+10000/10000 [==============================] - 461s 46ms/step - reward: -7.7859
+7 episodes - episode_reward: -4115.285 [-4343.745, -4010.516] - loss: 1561.233 - mean_squared_error: 3122.466 - mean_q: -1911.346 - reward_ctrl: -0.134 - reward_fwd: -7.652
+
+Interval 154 (1530000 steps performed)
+10000/10000 [==============================] - 460s 46ms/step - reward: -10.0285
+6 episodes - episode_reward: -4122.915 [-4258.485, -4017.604] - loss: 1477.957 - mean_squared_error: 2955.913 - mean_q: -1894.138 - reward_ctrl: -0.160 - reward_fwd: -9.868
+
+Interval 155 (1540000 steps performed)
+10000/10000 [==============================] - 449s 45ms/step - reward: -7.7922
+7 episodes - episode_reward: -4051.986 [-4119.372, -3893.703] - loss: 1653.050 - mean_squared_error: 3306.099 - mean_q: -1880.524 - reward_ctrl: -0.151 - reward_fwd: -7.641
+
+Interval 156 (1550000 steps performed)
+10000/10000 [==============================] - 467s 47ms/step - reward: -8.7302
+7 episodes - episode_reward: -4079.287 [-4291.775, -3951.160] - loss: 1411.339 - mean_squared_error: 2822.677 - mean_q: -1863.302 - reward_ctrl: -0.186 - reward_fwd: -8.544
+
+Interval 157 (1560000 steps performed)
+10000/10000 [==============================] - 522s 52ms/step - reward: -8.2763
+6 episodes - episode_reward: -4061.217 [-4142.775, -3951.922] - loss: 1612.434 - mean_squared_error: 3224.868 - mean_q: -1851.761 - reward_ctrl: -0.178 - reward_fwd: -8.098
+
+Interval 158 (1570000 steps performed)
+10000/10000 [==============================] - 637s 64ms/step - reward: -8.3041
+7 episodes - episode_reward: -4080.237 [-4251.008, -3966.370] - loss: 1258.462 - mean_squared_error: 2516.923 - mean_q: -1834.626 - reward_ctrl: -0.167 - reward_fwd: -8.137
+
+Interval 159 (1580000 steps performed)
+10000/10000 [==============================] - 550s 55ms/step - reward: -7.5236
+7 episodes - episode_reward: -4063.460 [-4167.287, -3901.153] - loss: 1330.567 - mean_squared_error: 2661.133 - mean_q: -1832.652 - reward_ctrl: -0.165 - reward_fwd: -7.359
+
+Interval 160 (1590000 steps performed)
+10000/10000 [==============================] - 511s 51ms/step - reward: -8.6938
+6 episodes - episode_reward: -4006.507 [-4094.016, -3941.703] - loss: 1289.246 - mean_squared_error: 2578.493 - mean_q: -1826.211 - reward_ctrl: -0.170 - reward_fwd: -8.524
+
+Interval 161 (1600000 steps performed)
+10000/10000 [==============================] - 516s 52ms/step - reward: -9.4538
+7 episodes - episode_reward: -4213.980 [-4805.297, -3972.578] - loss: 1360.402 - mean_squared_error: 2720.804 - mean_q: -1807.653 - reward_ctrl: -0.181 - reward_fwd: -9.273
+
+Interval 162 (1610000 steps performed)
+10000/10000 [==============================] - 529s 53ms/step - reward: -7.9476
+7 episodes - episode_reward: -4094.925 [-4170.755, -3943.175] - loss: 1406.689 - mean_squared_error: 2813.378 - mean_q: -1788.119 - reward_ctrl: -0.178 - reward_fwd: -7.770
+
+Interval 163 (1620000 steps performed)
+10000/10000 [==============================] - 523s 52ms/step - reward: -11.9052
+6 episodes - episode_reward: -4033.021 [-4161.661, -3925.611] - loss: 1353.098 - mean_squared_error: 2706.195 - mean_q: -1785.462 - reward_ctrl: -0.186 - reward_fwd: -11.719
+
+Interval 164 (1630000 steps performed)
+10000/10000 [==============================] - 487s 49ms/step - reward: -9.7806
+7 episodes - episode_reward: -4022.645 [-4222.802, -3898.023] - loss: 1415.302 - mean_squared_error: 2830.604 - mean_q: -1784.001 - reward_ctrl: -0.187 - reward_fwd: -9.593
+
+Interval 165 (1640000 steps performed)
+10000/10000 [==============================] - 493s 49ms/step - reward: -7.6309
+7 episodes - episode_reward: -4082.607 [-4295.193, -3905.762] - loss: 1384.285 - mean_squared_error: 2768.570 - mean_q: -1776.414 - reward_ctrl: -0.187 - reward_fwd: -7.444
+
+Interval 166 (1650000 steps performed)
+10000/10000 [==============================] - 500s 50ms/step - reward: -9.4396
+6 episodes - episode_reward: -4142.108 [-4290.951, -4080.911] - loss: 1246.990 - mean_squared_error: 2493.981 - mean_q: -1778.449 - reward_ctrl: -0.191 - reward_fwd: -9.249
+
+Interval 167 (1660000 steps performed)
+10000/10000 [==============================] - 539s 54ms/step - reward: -9.8806
+7 episodes - episode_reward: -4087.860 [-4256.324, -3933.549] - loss: 1341.357 - mean_squared_error: 2682.714 - mean_q: -1773.963 - reward_ctrl: -0.183 - reward_fwd: -9.698
+
+Interval 168 (1670000 steps performed)
+10000/10000 [==============================] - 556s 56ms/step - reward: -6.8167
+7 episodes - episode_reward: -3986.699 [-4026.407, -3920.047] - loss: 1443.918 - mean_squared_error: 2887.837 - mean_q: -1767.333 - reward_ctrl: -0.187 - reward_fwd: -6.629
+
+Interval 169 (1680000 steps performed)
+10000/10000 [==============================] - 553s 55ms/step - reward: -7.8607
+6 episodes - episode_reward: -4021.629 [-4207.201, -3917.454] - loss: 1296.577 - mean_squared_error: 2593.155 - mean_q: -1767.264 - reward_ctrl: -0.190 - reward_fwd: -7.671
+
+Interval 170 (1690000 steps performed)
+10000/10000 [==============================] - 555s 56ms/step - reward: -8.9882
+7 episodes - episode_reward: -4098.717 [-4186.219, -3950.140] - loss: 1368.518 - mean_squared_error: 2737.036 - mean_q: -1758.426 - reward_ctrl: -0.188 - reward_fwd: -8.800
+
+Interval 171 (1700000 steps performed)
+10000/10000 [==============================] - 566s 57ms/step - reward: -7.2355
+7 episodes - episode_reward: -4071.654 [-4181.048, -3981.307] - loss: 1221.799 - mean_squared_error: 2443.598 - mean_q: -1757.022 - reward_ctrl: -0.190 - reward_fwd: -7.045
+
+Interval 172 (1710000 steps performed)
+10000/10000 [==============================] - 569s 57ms/step - reward: -8.1541
+6 episodes - episode_reward: -4081.189 [-4253.575, -4030.239] - loss: 1452.748 - mean_squared_error: 2905.496 - mean_q: -1756.815 - reward_ctrl: -0.192 - reward_fwd: -7.962
+
+Interval 173 (1720000 steps performed)
+10000/10000 [==============================] - 561s 56ms/step - reward: -8.5659
+7 episodes - episode_reward: -4139.268 [-4315.813, -3934.186] - loss: 1492.387 - mean_squared_error: 2984.775 - mean_q: -1748.303 - reward_ctrl: -0.191 - reward_fwd: -8.375
+
+Interval 174 (1730000 steps performed)
+10000/10000 [==============================] - 549s 55ms/step - reward: -8.2571
+7 episodes - episode_reward: -4038.287 [-4141.081, -3845.535] - loss: 1593.111 - mean_squared_error: 3186.222 - mean_q: -1734.289 - reward_ctrl: -0.188 - reward_fwd: -8.069
+
+Interval 175 (1740000 steps performed)
+10000/10000 [==============================] - 550s 55ms/step - reward: -8.9079
+6 episodes - episode_reward: -4035.588 [-4162.787, -3901.246] - loss: 1363.631 - mean_squared_error: 2727.262 - mean_q: -1734.526 - reward_ctrl: -0.194 - reward_fwd: -8.714
+
+Interval 176 (1750000 steps performed)
+10000/10000 [==============================] - 553s 55ms/step - reward: -11.5010
+7 episodes - episode_reward: -4015.613 [-4182.475, -3933.614] - loss: 1241.385 - mean_squared_error: 2482.769 - mean_q: -1722.718 - reward_ctrl: -0.194 - reward_fwd: -11.307
+
+Interval 177 (1760000 steps performed)
+10000/10000 [==============================] - 558s 56ms/step - reward: -8.8564
+7 episodes - episode_reward: -4026.614 [-4108.078, -3908.564] - loss: 1270.308 - mean_squared_error: 2540.616 - mean_q: -1712.262 - reward_ctrl: -0.194 - reward_fwd: -8.663
+
+Interval 178 (1770000 steps performed)
+10000/10000 [==============================] - 564s 56ms/step - reward: -9.5036
+6 episodes - episode_reward: -4205.985 [-4299.612, -4040.803] - loss: 1195.172 - mean_squared_error: 2390.344 - mean_q: -1710.941 - reward_ctrl: -0.194 - reward_fwd: -9.309
+
+Interval 179 (1780000 steps performed)
+10000/10000 [==============================] - 571s 57ms/step - reward: -7.6641
+7 episodes - episode_reward: -4007.513 [-4105.076, -3866.687] - loss: 1275.213 - mean_squared_error: 2550.426 - mean_q: -1708.431 - reward_ctrl: -0.193 - reward_fwd: -7.472
+
+Interval 180 (1790000 steps performed)
+10000/10000 [==============================] - 575s 57ms/step - reward: -6.7993
+7 episodes - episode_reward: -4062.308 [-4178.967, -3945.212] - loss: 1233.271 - mean_squared_error: 2466.541 - mean_q: -1709.610 - reward_ctrl: -0.194 - reward_fwd: -6.606
+
+Interval 181 (1800000 steps performed)
+10000/10000 [==============================] - 579s 58ms/step - reward: -8.4598
+6 episodes - episode_reward: -4119.598 [-4261.829, -4027.572] - loss: 1429.488 - mean_squared_error: 2858.977 - mean_q: -1696.789 - reward_ctrl: -0.193 - reward_fwd: -8.267
+
+Interval 182 (1810000 steps performed)
+10000/10000 [==============================] - 583s 58ms/step - reward: -6.6151
+7 episodes - episode_reward: -3941.611 [-4034.696, -3852.928] - loss: 1288.389 - mean_squared_error: 2576.778 - mean_q: -1679.184 - reward_ctrl: -0.194 - reward_fwd: -6.421
+
+Interval 183 (1820000 steps performed)
+10000/10000 [==============================] - 585s 58ms/step - reward: -7.2877
+7 episodes - episode_reward: -4019.244 [-4069.613, -3963.948] - loss: 1169.180 - mean_squared_error: 2338.359 - mean_q: -1669.104 - reward_ctrl: -0.194 - reward_fwd: -7.093
+
+Interval 184 (1830000 steps performed)
+10000/10000 [==============================] - 591s 59ms/step - reward: -7.2187
+6 episodes - episode_reward: -3954.656 [-4171.450, -3827.305] - loss: 1285.234 - mean_squared_error: 2570.467 - mean_q: -1664.384 - reward_ctrl: -0.193 - reward_fwd: -7.026
+
+Interval 185 (1840000 steps performed)
+10000/10000 [==============================] - 593s 59ms/step - reward: -6.9953
+7 episodes - episode_reward: -3956.003 [-4010.501, -3873.449] - loss: 1085.007 - mean_squared_error: 2170.015 - mean_q: -1653.588 - reward_ctrl: -0.195 - reward_fwd: -6.801
+
+Interval 186 (1850000 steps performed)
+10000/10000 [==============================] - 603s 60ms/step - reward: -6.7539
+7 episodes - episode_reward: -4074.222 [-4289.265, -3959.515] - loss: 1229.997 - mean_squared_error: 2459.993 - mean_q: -1648.709 - reward_ctrl: -0.194 - reward_fwd: -6.560
+
+Interval 187 (1860000 steps performed)
+10000/10000 [==============================] - 609s 61ms/step - reward: -8.3119
+6 episodes - episode_reward: -4100.193 [-4334.915, -3855.534] - loss: 919.424 - mean_squared_error: 1838.848 - mean_q: -1636.970 - reward_ctrl: -0.193 - reward_fwd: -8.119
+
+Interval 188 (1870000 steps performed)
+10000/10000 [==============================] - 612s 61ms/step - reward: -7.6062
+7 episodes - episode_reward: -4066.985 [-4336.508, -3914.859] - loss: 1093.692 - mean_squared_error: 2187.383 - mean_q: -1629.768 - reward_ctrl: -0.193 - reward_fwd: -7.413
+
+Interval 189 (1880000 steps performed)
+10000/10000 [==============================] - 620s 62ms/step - reward: -6.9439
+7 episodes - episode_reward: -4025.717 [-4190.898, -3898.622] - loss: 1267.760 - mean_squared_error: 2535.521 - mean_q: -1620.197 - reward_ctrl: -0.193 - reward_fwd: -6.750
+
+Interval 190 (1890000 steps performed)
+10000/10000 [==============================] - 627s 63ms/step - reward: -8.2064
+6 episodes - episode_reward: -3942.628 [-4031.854, -3817.129] - loss: 1391.915 - mean_squared_error: 2783.831 - mean_q: -1615.365 - reward_ctrl: -0.192 - reward_fwd: -8.015
+
+Interval 191 (1900000 steps performed)
+10000/10000 [==============================] - 629s 63ms/step - reward: -8.9328
+7 episodes - episode_reward: -4010.869 [-4111.674, -3849.432] - loss: 1182.212 - mean_squared_error: 2364.423 - mean_q: -1606.246 - reward_ctrl: -0.192 - reward_fwd: -8.740
+
+Interval 192 (1910000 steps performed)
+10000/10000 [==============================] - 644s 64ms/step - reward: -7.3497
+7 episodes - episode_reward: -4052.294 [-4229.166, -3945.922] - loss: 1035.355 - mean_squared_error: 2070.710 - mean_q: -1606.858 - reward_ctrl: -0.192 - reward_fwd: -7.157
+
+Interval 193 (1920000 steps performed)
+10000/10000 [==============================] - 641s 64ms/step - reward: -7.4351
+6 episodes - episode_reward: -3996.448 [-4071.490, -3931.014] - loss: 1481.953 - mean_squared_error: 2963.905 - mean_q: -1595.901 - reward_ctrl: -0.192 - reward_fwd: -7.243
+
+Interval 194 (1930000 steps performed)
+10000/10000 [==============================] - 647s 65ms/step - reward: -7.6974
+7 episodes - episode_reward: -3972.254 [-4025.597, -3904.008] - loss: 1072.160 - mean_squared_error: 2144.321 - mean_q: -1592.014 - reward_ctrl: -0.191 - reward_fwd: -7.507
+
+Interval 195 (1940000 steps performed)
+10000/10000 [==============================] - 651s 65ms/step - reward: -9.7935
+7 episodes - episode_reward: -4159.763 [-4287.270, -4091.563] - loss: 1226.328 - mean_squared_error: 2452.656 - mean_q: -1582.146 - reward_ctrl: -0.186 - reward_fwd: -9.608
+
+Interval 196 (1950000 steps performed)
+10000/10000 [==============================] - 659s 66ms/step - reward: -8.9248
+6 episodes - episode_reward: -4028.107 [-4161.465, -3904.384] - loss: 1222.057 - mean_squared_error: 2444.114 - mean_q: -1579.450 - reward_ctrl: -0.191 - reward_fwd: -8.734
+
+Interval 197 (1960000 steps performed)
+10000/10000 [==============================] - 666s 67ms/step - reward: -6.7847
+7 episodes - episode_reward: -4080.526 [-4273.508, -3973.340] - loss: 1281.994 - mean_squared_error: 2563.987 - mean_q: -1580.278 - reward_ctrl: -0.191 - reward_fwd: -6.594
+
+Interval 198 (1970000 steps performed)
+10000/10000 [==============================] - 673s 67ms/step - reward: -6.0314
+7 episodes - episode_reward: -3945.607 [-4026.111, -3897.427] - loss: 1177.282 - mean_squared_error: 2354.565 - mean_q: -1574.487 - reward_ctrl: -0.193 - reward_fwd: -5.838
+
+Interval 199 (1980000 steps performed)
+10000/10000 [==============================] - 672s 67ms/step - reward: -6.8570
+6 episodes - episode_reward: -3904.049 [-3969.375, -3871.904] - loss: 989.050 - mean_squared_error: 1978.101 - mean_q: -1569.494 - reward_ctrl: -0.195 - reward_fwd: -6.662
+
+Interval 200 (1990000 steps performed)
+10000/10000 [==============================] - 675s 67ms/step - reward: -6.6597
+7 episodes - episode_reward: -3984.396 [-4124.973, -3898.242] - loss: 1399.095 - mean_squared_error: 2798.189 - mean_q: -1564.762 - reward_ctrl: -0.196 - reward_fwd: -6.464
+
+Interval 201 (2000000 steps performed)
+10000/10000 [==============================] - 683s 68ms/step - reward: -6.2462
+7 episodes - episode_reward: -3910.372 [-3987.508, -3849.029] - loss: 916.270 - mean_squared_error: 1832.540 - mean_q: -1558.637 - reward_ctrl: -0.195 - reward_fwd: -6.051
+
+Interval 202 (2010000 steps performed)
+10000/10000 [==============================] - 690s 69ms/step - reward: -7.2007
+6 episodes - episode_reward: -3900.154 [-3980.969, -3841.782] - loss: 1280.726 - mean_squared_error: 2561.452 - mean_q: -1548.192 - reward_ctrl: -0.196 - reward_fwd: -7.005
+
+Interval 203 (2020000 steps performed)
+10000/10000 [==============================] - 741s 74ms/step - reward: -7.7964
+7 episodes - episode_reward: -3966.968 [-4052.724, -3904.591] - loss: 978.926 - mean_squared_error: 1957.852 - mean_q: -1534.926 - reward_ctrl: -0.195 - reward_fwd: -7.601
+
+Interval 204 (2030000 steps performed)
+10000/10000 [==============================] - 756s 76ms/step - reward: -6.3832
+7 episodes - episode_reward: -3946.623 [-4043.272, -3871.515] - loss: 1100.303 - mean_squared_error: 2200.607 - mean_q: -1535.363 - reward_ctrl: -0.197 - reward_fwd: -6.186
+
+Interval 205 (2040000 steps performed)
+10000/10000 [==============================] - 761s 76ms/step - reward: -7.8733
+6 episodes - episode_reward: -3869.652 [-3933.956, -3791.727] - loss: 1004.027 - mean_squared_error: 2008.053 - mean_q: -1521.436 - reward_ctrl: -0.196 - reward_fwd: -7.677
+
+Interval 206 (2050000 steps performed)
+10000/10000 [==============================] - 764s 76ms/step - reward: -8.1196
+7 episodes - episode_reward: -3979.008 [-4093.588, -3881.831] - loss: 1156.400 - mean_squared_error: 2312.801 - mean_q: -1521.669 - reward_ctrl: -0.196 - reward_fwd: -7.923
+
+Interval 207 (2060000 steps performed)
+10000/10000 [==============================] - 758s 76ms/step - reward: -9.4376
+7 episodes - episode_reward: -3969.290 [-4021.882, -3871.822] - loss: 1430.661 - mean_squared_error: 2861.321 - mean_q: -1518.435 - reward_ctrl: -0.197 - reward_fwd: -9.241
+
+Interval 208 (2070000 steps performed)
+10000/10000 [==============================] - 731s 73ms/step - reward: -9.2543
+6 episodes - episode_reward: -3941.803 [-4120.572, -3839.750] - loss: 1181.428 - mean_squared_error: 2362.857 - mean_q: -1507.214 - reward_ctrl: -0.197 - reward_fwd: -9.058
+
+Interval 209 (2080000 steps performed)
+10000/10000 [==============================] - 731s 73ms/step - reward: -8.3271
+7 episodes - episode_reward: -3985.633 [-4147.891, -3859.588] - loss: 1129.790 - mean_squared_error: 2259.579 - mean_q: -1508.880 - reward_ctrl: -0.198 - reward_fwd: -8.129
+
+Interval 210 (2090000 steps performed)
+10000/10000 [==============================] - 747s 75ms/step - reward: -6.5716
+7 episodes - episode_reward: -3988.840 [-4204.416, -3888.397] - loss: 1124.732 - mean_squared_error: 2249.463 - mean_q: -1499.903 - reward_ctrl: -0.197 - reward_fwd: -6.375
+
+Interval 211 (2100000 steps performed)
+10000/10000 [==============================] - 745s 74ms/step - reward: -9.3869
+6 episodes - episode_reward: -4025.756 [-4200.440, -3890.103] - loss: 1199.004 - mean_squared_error: 2398.007 - mean_q: -1500.007 - reward_ctrl: -0.196 - reward_fwd: -9.191
+
+Interval 212 (2110000 steps performed)
+10000/10000 [==============================] - 762s 76ms/step - reward: -7.3384
+7 episodes - episode_reward: -4056.526 [-4296.325, -3868.573] - loss: 981.065 - mean_squared_error: 1962.129 - mean_q: -1489.792 - reward_ctrl: -0.196 - reward_fwd: -7.142
+
+Interval 213 (2120000 steps performed)
+10000/10000 [==============================] - 769s 77ms/step - reward: -6.0299
+7 episodes - episode_reward: -4003.714 [-4113.746, -3859.877] - loss: 1238.373 - mean_squared_error: 2476.746 - mean_q: -1478.486 - reward_ctrl: -0.196 - reward_fwd: -5.833
+
+Interval 214 (2130000 steps performed)
+10000/10000 [==============================] - 763s 76ms/step - reward: -7.5357
+6 episodes - episode_reward: -4002.669 [-4028.445, -3953.234] - loss: 902.093 - mean_squared_error: 1804.186 - mean_q: -1472.605 - reward_ctrl: -0.197 - reward_fwd: -7.339
+
+Interval 215 (2140000 steps performed)
+10000/10000 [==============================] - 768s 77ms/step - reward: -6.8987
+7 episodes - episode_reward: -3958.018 [-4055.769, -3891.949] - loss: 936.381 - mean_squared_error: 1872.762 - mean_q: -1467.141 - reward_ctrl: -0.196 - reward_fwd: -6.703
+
+Interval 216 (2150000 steps performed)
+10000/10000 [==============================] - 773s 77ms/step - reward: -7.3651
+7 episodes - episode_reward: -4037.878 [-4165.362, -3958.863] - loss: 1080.180 - mean_squared_error: 2160.360 - mean_q: -1462.476 - reward_ctrl: -0.197 - reward_fwd: -7.168
+
+Interval 217 (2160000 steps performed)
+10000/10000 [==============================] - 817s 82ms/step - reward: -7.9879
+6 episodes - episode_reward: -4059.762 [-4311.427, -3923.143] - loss: 1224.552 - mean_squared_error: 2449.105 - mean_q: -1461.406 - reward_ctrl: -0.196 - reward_fwd: -7.792
+
+Interval 218 (2170000 steps performed)
+10000/10000 [==============================] - 825s 83ms/step - reward: -7.5801
+7 episodes - episode_reward: -3939.150 [-4064.237, -3823.690] - loss: 1269.832 - mean_squared_error: 2539.663 - mean_q: -1464.834 - reward_ctrl: -0.196 - reward_fwd: -7.384
+
+Interval 219 (2180000 steps performed)
+10000/10000 [==============================] - 792s 79ms/step - reward: -6.4015
+7 episodes - episode_reward: -3959.874 [-4047.698, -3849.889] - loss: 1237.540 - mean_squared_error: 2475.080 - mean_q: -1453.249 - reward_ctrl: -0.196 - reward_fwd: -6.205
+
+Interval 220 (2190000 steps performed)
+10000/10000 [==============================] - 797s 80ms/step - reward: -7.5395
+6 episodes - episode_reward: -4041.468 [-4088.004, -3981.240] - loss: 1392.850 - mean_squared_error: 2785.700 - mean_q: -1445.203 - reward_ctrl: -0.197 - reward_fwd: -7.343
+
+Interval 221 (2200000 steps performed)
+10000/10000 [==============================] - 835s 83ms/step - reward: -7.2287
+7 episodes - episode_reward: -3984.908 [-4085.602, -3860.691] - loss: 979.476 - mean_squared_error: 1958.952 - mean_q: -1447.428 - reward_ctrl: -0.196 - reward_fwd: -7.032
+
+Interval 222 (2210000 steps performed)
+10000/10000 [==============================] - 873s 87ms/step - reward: -6.9782
+7 episodes - episode_reward: -4068.967 [-4220.622, -3912.860] - loss: 1069.611 - mean_squared_error: 2139.221 - mean_q: -1440.691 - reward_ctrl: -0.197 - reward_fwd: -6.781
+
+Interval 223 (2220000 steps performed)
+10000/10000 [==============================] - 861s 86ms/step - reward: -8.1806
+6 episodes - episode_reward: -4197.282 [-4448.782, -4014.708] - loss: 970.567 - mean_squared_error: 1941.134 - mean_q: -1437.013 - reward_ctrl: -0.196 - reward_fwd: -7.984
+
+Interval 224 (2230000 steps performed)
+10000/10000 [==============================] - 873s 87ms/step - reward: -8.0993
+7 episodes - episode_reward: -4063.308 [-4289.950, -3921.922] - loss: 1197.742 - mean_squared_error: 2395.483 - mean_q: -1432.279 - reward_ctrl: -0.198 - reward_fwd: -7.902
+
+Interval 225 (2240000 steps performed)
+10000/10000 [==============================] - 878s 88ms/step - reward: -6.6651
+done, took 85844.389 seconds
+

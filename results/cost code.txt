@@ -1,0 +1,25 @@
+# -*- coding: utf-8 -*-
+"""
+Spyder Editor
+
+This is a temporary script file.
+"""
+import numpy as np
+import matplotlib.pyplot as plt
+
+def normcost(timefactor=6.41):
+    with open('cost.txt') as f:
+        r=f.readlines()
+    y=np.array(r[0].strip().split()).astype(np.float)
+    x=np.linspace(1,y.shape[0],y.shape[0])*timefactor
+    plt.figure(figsize=(12,9))
+    plt.plot(x,y/y[-1])
+    plt.vlines(x[-1],1,y[0]/y[-1],colors='r',linestyles='--')
+    plt.text(x[-1],1,'9489s')
+    plt.xlabel('time/s')
+    plt.ylabel('cost / cost_norm')
+    plt.show()
+    print("NUM = {value1}".format(value1=y.shape[0]))
+    print("MAX = {value1}  MIN = {value2}".format(value1=np.max(y),value2=np.min(y)))
+    
+# the timefactor=5.03 for 3 link swimmer; 6.41 for 6 link swimmer; 0.043 fpr cartpole; 0.026 for pendulum

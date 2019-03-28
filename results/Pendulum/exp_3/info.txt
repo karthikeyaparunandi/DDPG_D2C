@@ -1,0 +1,149 @@
+Using TensorFlow backend.
+running build_ext
+(2,)
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+flatten_1 (Flatten)          (None, 2)                 0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 16)                48        
+_________________________________________________________________
+activation_1 (Activation)    (None, 16)                0         
+_________________________________________________________________
+dense_2 (Dense)              (None, 16)                272       
+_________________________________________________________________
+activation_2 (Activation)    (None, 16)                0         
+_________________________________________________________________
+dense_3 (Dense)              (None, 16)                272       
+_________________________________________________________________
+activation_3 (Activation)    (None, 16)                0         
+_________________________________________________________________
+dense_4 (Dense)              (None, 1)                 17        
+_________________________________________________________________
+activation_4 (Activation)    (None, 1)                 0         
+=================================================================
+Total params: 609
+Trainable params: 609
+Non-trainable params: 0
+_________________________________________________________________
+None
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+observation_input (InputLayer)  (None, 1, 2)         0                                            
+__________________________________________________________________________________________________
+action_input (InputLayer)       (None, 1)            0                                            
+__________________________________________________________________________________________________
+flatten_2 (Flatten)             (None, 2)            0           observation_input[0][0]          
+__________________________________________________________________________________________________
+concatenate_1 (Concatenate)     (None, 3)            0           action_input[0][0]               
+                                                                 flatten_2[0][0]                  
+__________________________________________________________________________________________________
+dense_5 (Dense)                 (None, 32)           128         concatenate_1[0][0]              
+__________________________________________________________________________________________________
+activation_5 (Activation)       (None, 32)           0           dense_5[0][0]                    
+__________________________________________________________________________________________________
+dense_6 (Dense)                 (None, 32)           1056        activation_5[0][0]               
+__________________________________________________________________________________________________
+activation_6 (Activation)       (None, 32)           0           dense_6[0][0]                    
+__________________________________________________________________________________________________
+dense_7 (Dense)                 (None, 32)           1056        activation_6[0][0]               
+__________________________________________________________________________________________________
+activation_7 (Activation)       (None, 32)           0           dense_7[0][0]                    
+__________________________________________________________________________________________________
+dense_8 (Dense)                 (None, 1)            33          activation_7[0][0]               
+__________________________________________________________________________________________________
+activation_8 (Activation)       (None, 1)            0           dense_8[0][0]                    
+==================================================================================================
+Total params: 2,273
+Trainable params: 2,273
+Non-trainable params: 0
+__________________________________________________________________________________________________
+None
+2019-01-23 21:12:13.354943: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+Training for 200000 steps ...
+Interval 1 (0 steps performed)
+10000/10000 [==============================] - 31s 3ms/step - reward: -15526.7708
+333 episodes - episode_reward: -466265.130 [-153674059.038, -3436.216] - loss: 290756566068.997 - mean_squared_error: 581513132137.995 - mean_q: -985.977
+
+Interval 2 (10000 steps performed)
+10000/10000 [==============================] - 34s 3ms/step - reward: -136.7786
+333 episodes - episode_reward: -4107.801 [-6106.545, -1917.418] - loss: 155847458816.000 - mean_squared_error: 311694917632.000 - mean_q: -2250.680
+
+Interval 3 (20000 steps performed)
+10000/10000 [==============================] - 36s 4ms/step - reward: -84.0145
+334 episodes - episode_reward: -2519.320 [-4065.997, -1390.742] - loss: 85550718976.000 - mean_squared_error: 171101437952.000 - mean_q: -2532.519
+
+Interval 4 (30000 steps performed)
+10000/10000 [==============================] - 35s 3ms/step - reward: -80.6787
+333 episodes - episode_reward: -2418.737 [-3260.985, -1515.980] - loss: 68732616704.000 - mean_squared_error: 137465233408.000 - mean_q: -2429.053
+
+Interval 5 (40000 steps performed)
+10000/10000 [==============================] - 38s 4ms/step - reward: -94.3173
+333 episodes - episode_reward: -2830.527 [-3539.883, -1921.268] - loss: 41812602880.000 - mean_squared_error: 83625205760.000 - mean_q: -1976.214
+
+Interval 6 (50000 steps performed)
+10000/10000 [==============================] - 39s 4ms/step - reward: -116.3891
+334 episodes - episode_reward: -3490.556 [-4544.851, -1358.267] - loss: 30882803712.000 - mean_squared_error: 61765607424.000 - mean_q: -1864.403
+
+Interval 7 (60000 steps performed)
+10000/10000 [==============================] - 43s 4ms/step - reward: -112.4947
+333 episodes - episode_reward: -3374.433 [-8127.643, -1158.419] - loss: 43392897024.000 - mean_squared_error: 86785794048.000 - mean_q: -1662.871
+
+Interval 8 (70000 steps performed)
+10000/10000 [==============================] - 48s 5ms/step - reward: -53.4665
+333 episodes - episode_reward: -1605.792 [-4698.965, -1129.186] - loss: 44578390016.000 - mean_squared_error: 89156780032.000 - mean_q: -1260.819
+
+Interval 9 (80000 steps performed)
+10000/10000 [==============================] - 51s 5ms/step - reward: -42.8666
+334 episodes - episode_reward: -1287.014 [-2081.641, -1142.644] - loss: 12885121024.000 - mean_squared_error: 25770242048.000 - mean_q: -609.444
+
+Interval 10 (90000 steps performed)
+10000/10000 [==============================] - 51s 5ms/step - reward: -39.3630
+333 episodes - episode_reward: -1178.745 [-1728.867, -1125.149] - loss: 22400004096.000 - mean_squared_error: 44800008192.000 - mean_q: -553.254
+
+Interval 11 (100000 steps performed)
+10000/10000 [==============================] - 51s 5ms/step - reward: -38.6916
+333 episodes - episode_reward: -1161.854 [-1601.836, -1118.959] - loss: 50021412.000 - mean_squared_error: 100042824.000 - mean_q: -297.457
+
+Interval 12 (110000 steps performed)
+10000/10000 [==============================] - 51s 5ms/step - reward: -38.7019
+334 episodes - episode_reward: -1162.111 [-1711.792, -1119.361] - loss: 945.851 - mean_squared_error: 1891.701 - mean_q: -249.177
+
+Interval 13 (120000 steps performed)
+10000/10000 [==============================] - 54s 5ms/step - reward: -38.6368
+333 episodes - episode_reward: -1156.885 [-1529.257, -1117.351] - loss: 699.410 - mean_squared_error: 1398.820 - mean_q: -225.336
+
+Interval 14 (130000 steps performed)
+10000/10000 [==============================] - 56s 6ms/step - reward: -38.5889
+333 episodes - episode_reward: -1158.813 [-1663.702, -1117.213] - loss: 605.237 - mean_squared_error: 1210.474 - mean_q: -205.301
+
+Interval 15 (140000 steps performed)
+10000/10000 [==============================] - 59s 6ms/step - reward: -38.4516
+334 episodes - episode_reward: -1154.625 [-1514.651, -1118.103] - loss: 484.019 - mean_squared_error: 968.038 - mean_q: -179.744
+
+Interval 16 (150000 steps performed)
+10000/10000 [==============================] - 69s 7ms/step - reward: -38.6904
+333 episodes - episode_reward: -1158.542 [-1437.563, -1117.127] - loss: 276.262 - mean_squared_error: 552.525 - mean_q: -142.913
+
+Interval 17 (160000 steps performed)
+10000/10000 [==============================] - 60s 6ms/step - reward: -38.1656
+333 episodes - episode_reward: -1146.075 [-1363.949, -1114.827] - loss: 101.937 - mean_squared_error: 203.875 - mean_q: -117.221
+
+Interval 18 (170000 steps performed)
+10000/10000 [==============================] - 62s 6ms/step - reward: -38.0700
+334 episodes - episode_reward: -1143.181 [-1386.528, -1115.360] - loss: 4.188 - mean_squared_error: 8.377 - mean_q: -106.003
+
+Interval 19 (180000 steps performed)
+10000/10000 [==============================] - 66s 7ms/step - reward: -38.1082
+333 episodes - episode_reward: -1141.091 [-1349.248, -1114.371] - loss: 3.313 - mean_squared_error: 6.627 - mean_q: -106.156
+
+Interval 20 (190000 steps performed)
+10000/10000 [==============================] - 68s 7ms/step - reward: -37.9655
+done, took 1002.326 seconds
+Creating window glfw
+
+------------------------------------------------------------------------------------
+reward = -10*(3*ob[0]**2 + 2*ob[1]**2)
+
+
