@@ -1,4 +1,4 @@
-# icml_project
+# DDPG
 Project to evaluate D2C approach and compare it with DDPG.
 karthik_branch has RL code (DDPG implementation).
 
