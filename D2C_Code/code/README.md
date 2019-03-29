@@ -4,8 +4,12 @@
 - System identification
 - Closed-loop simulation and data analysis
 
-## .m file for the following function:
+## .m file for the following functions:
 - LQR feedback gain calculation
+
+## .py file for the following functions:
+- Plot generation
+- Data analysis
 
 ## Guide
 - All paths need to be pointed correctly.
