@@ -12,4 +12,10 @@ Contributers: Karthikeya S Parunandi and Ran Wang.
 - Hopper
 - Cheetah
 
+The models are taken from OpenAI gym [2] and Deepmind-Control suite[3] and then modified according to our problem.
+
+References:
+1) Keras-rl, https://github.com/keras-rl/keras-rl
+2) OpenAI gym, https://github.com/openai/gym
+3) Deepmind dm_control, https://github.com/deepmind/dm_control
 
