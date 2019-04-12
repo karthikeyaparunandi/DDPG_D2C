@@ -3,12 +3,16 @@ from gym import utils
 from gym.envs.mujoco import mujoco_env
 import time
 
+PI = np.pi
+
 class PendulumEnv(mujoco_env.MujocoEnv, utils.EzPickle):
     def __init__(self):
         utils.EzPickle.__init__(self)
-        mujoco_env.MujocoEnv.__init__(self, 'pendulum.xml', 1, np.array([np.pi]), np.array([0]))
+        mujoco_env.MujocoEnv.__init__(self, 'pendulum.xml', 1, np.array([PI]), np.array([0]))
 
     def step(self, a):
+        # step function for RL based agent
+
         self.do_simulation(a, self.frame_skip)
         ob = self._get_obs()
         reward = -10*(2*ob[0]**2 + ob[1]**2) - 3*a[0]**2
@@ -34,4 +38,4 @@ class PendulumEnv(mujoco_env.MujocoEnv, utils.EzPickle):
 
 
     def angle_normalize(self,x):
-        return (((x+np.pi) % (2*np.pi)) - np.pi)
+        return -((-x+PI) % (2*PI)) + PI

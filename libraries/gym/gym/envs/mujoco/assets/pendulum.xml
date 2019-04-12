@@ -3,7 +3,7 @@
   <include file="./common/skybox.xml"/>
   <include file="./common/materials.xml"/>
 
-  <option timestep=".01">
+  <option timestep=".1">
     <flag contact="disable" energy="enable"/>
   </option>
 
