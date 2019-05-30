@@ -3,7 +3,7 @@ Project to evaluate our D2C approach and compare it with DDPG
 
 Contributers: Karthikeya S Parunandi and Ran Wang.
 
-'karthik_branch' has DDPG [1] setup (adapted from Keras-rl[2]'s implementation) and 'ran_branch' has the implementation of D2C. The following systems are considered as of now:
+'karthik_branch' has DDPG [1] setup (Python3) (adapted from Keras-rl[2]'s implementation) and 'ran_branch' has the implementation of D2C (C++). Further, 'karthik_branch' also has the implementation of D2C in Python3. The following systems are considered as of now:
 - Pendulum
 - Cartpole
 - Swimmer (3-link)
