@@ -1,2 +1,2 @@
 # Parameters
-This file contains parameter files for open-loop training.
+This folder contains parameter files for open-loop training.
