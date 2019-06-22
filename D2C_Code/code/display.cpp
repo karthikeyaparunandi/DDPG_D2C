@@ -3,6 +3,9 @@
 //  Written by Emo Todorov         //
 //  Copyright (C) 2017 Roboti LLC  //
 //---------------------------------//
+//  Ran Wang from EDPLab@TAMU      //
+//  added the D2C testing code     //
+//---------------------------------//
 
 #include "mujoco.h"
 #include "glfw3.h"
@@ -13,7 +16,7 @@
 #include "time.h"
 
 //-------------------------------- macro variables --------------------------------------
-// model selection: PENDULUM CARTPOLE CART2POLE CART3POLE CART7POLE ACROBOT FISH SWIMMER6 SWIMMER3
+// model selection: PENDULUM CARTPOLE SWIMMER6 SWIMMER3
 #define SWIMMER6
 #define CTRL_LIMITTED false
 #define SYSIDCHECK false
@@ -26,10 +29,10 @@
 //-------------------------------- global variables -------------------------------------
 // user customized parameters
 #if defined(SWIMMER3)
-const mjtNum t_step = 0.01;//0.005
-const mjtNum cal_step = 0.01;
+const mjtNum t_step = 0.005;//0.01;0.01;800
+const mjtNum cal_step = 0.005;
 const mjtNum ptb_coef = 0.05;
-const int step_max = 800;
+const int step_max = 1600;
 const int ctrl_num = 2;
 const int NS = 10;
 const char* mname = "swimmer3.xml";
@@ -38,10 +41,10 @@ const mjtNum K[NS] = { 0 };
 mjtNum state_nominal[step_max + 1][NS + 1] = { 0 };
 mjtNum x_goal[NS] = { 0 };
 #elif defined(SWIMMER6)
-const mjtNum t_step = 0.01;//0.006
-const mjtNum cal_step = 0.01;
+const mjtNum t_step = 0.006;//0.01;0.01;900
+const mjtNum cal_step = 0.006;
 const mjtNum ptb_coef = .03;
-const int step_max = 900;
+const int step_max = 1500;
 const int ctrl_num = 5;
 const int NS = 16;
 const char* mname = "swimmer6.xml";
@@ -49,56 +52,6 @@ static bool TOP_FLAG = false;
 const mjtNum K[NS] = { 0 };
 mjtNum state_nominal[step_max + 1][NS + 1] = { 0.0 };
 mjtNum x_goal[NS] = { 0 };
-#elif defined(FISH)
-const mjtNum t_step = 0.005;//0.1
-const mjtNum cal_step = 0.005;
-const mjtNum ptb_coef = 0.2;
-const int step_max = 1600;//80
-const int ctrl_num = 5;
-const int NS = 26;
-const char* mname = "fish.xml";
-static bool TOP_FLAG = false;
-const mjtNum K[NS] = { 0 };
-mjtNum state_nominal[step_max + 1][NS+1] = { 0.0, 0.0, 0, 0, 0, 0, 0, 0, 1 };
-mjtNum x_goal[NS] = { 0 };
-#elif defined(CART2POLE)
-const mjtNum t_step = 0.05;
-const mjtNum cal_step = 0.05;
-const mjtNum ptb_coef = .1;
-const int step_max = 120;
-const int ctrl_num = 1;
-const int NS = 6;
-const char* mname = "cart2pole.xml";
-static bool TOP_FLAG = false;
-const mjtNum K[NS] = { 6.1164,   13.3886,  101.9535,   60.7007,  277.3286,   55.3521 };
-mjtNum state_nominal[step_max + 1][NS] = { 0.0, 0.0, PI, 0, 0, 0 };
-// top is 0
-mjtNum x_goal[NS] = {
-	(mjtNum)(0),
-	(mjtNum)(0),
-	(mjtNum)(0),
-	(mjtNum)(0),
-	(mjtNum)(0),
-	(mjtNum)(0),
-};
-#elif defined(ACROBOT)
-const mjtNum t_step = 0.01;
-const mjtNum cal_step = 0.01;
-const mjtNum ptb_coef = 0.;
-const int step_max = 800;
-const int ctrl_num = 1;
-const int NS = 4;
-mjtNum K[NS] = { -428.9630, -158.2817, -108.7071, -45.5430 };
-const char* mname = "acrobot.xml";
-static bool TOP_FLAG = false;
-mjtNum state_nominal[step_max + 1][NS] = { PI, 0.0, 0, 0 };
-// top is 0
-mjtNum x_goal[NS] = {
-	(mjtNum)(0),
-	(mjtNum)(0),
-	(mjtNum)(0),
-	(mjtNum)(0),
-};
 #elif defined(PENDULUM)
 const mjtNum t_step = 0.1;
 const mjtNum cal_step = 0.1;
@@ -1386,9 +1339,6 @@ int setcontrol(mjModel* m, mjData* d)
 #if defined (PENDULUM)
 			state[0] = (PI - fabs(d->qpos[0] - PI))*((PI - d->qpos[0] > 0) - (PI - d->qpos[0] < 0));
 #endif
-#if defined (CART2POLE)
-			state[2] = (PI - fabs(d->qpos[1] - PI))*((PI - d->qpos[1] > 0) - (PI - d->qpos[1] < 0));
-#endif
 #if defined (CARTPOLE)
 			state[2] = (PI - fabs(d->qpos[1]))*((d->qpos[1] < 0) - (d->qpos[1] > 0));
 #endif
@@ -1430,21 +1380,7 @@ int setcontrol(mjModel* m, mjData* d)
 				}
 			}
 			else {
-				index++;
-#if defined(FISH)
-				for (int y = 0; y < m->nq; y++)
-				{
-					if (y < 6) {
-						state[2 * y] = d->qpos[y] - state_nominal[index][2 * y];
-						state_closedlp[index][2 * y] = d->qpos[y];
-					}
-					else if (y > 6) {
-						state[2 * (y - 1)] = d->qpos[y] - state_nominal[index][2 * y];
-						state_closedlp[index][2 * (y - 1)] = d->qpos[y];
-					}
-				}
-#else 
-				
+				index++;			
 				state_geomclp[index][0] = d->geom_xpos[6] - 0.6;
 				state_geomclp[index][1] = d->geom_xpos[7] + 0.6;
 				for (int y = 0; y < m->nq; y++)
@@ -1452,7 +1388,7 @@ int setcontrol(mjModel* m, mjData* d)
 					state[2 * y] = d->qpos[y] - state_nominal[index][2 * y];
 					state_closedlp[index][2 * y] = d->qpos[y];
 				}
-#endif
+
 				for (int y = 0; y < m->nv; y++)
 				{
 					state[2 * y + 1] = d->qvel[y] - state_nominal[index][2 * y + 1];
@@ -1522,9 +1458,6 @@ int setcontrol1(mjModel* m, mjData* d)
 #if defined (PENDULUM)
 			state[0] = (PI - fabs(d->qpos[0] - PI))*((PI - d->qpos[0] > 0) - (PI - d->qpos[0] < 0));
 #endif
-#if defined (CART2POLE)
-			state[2] = (PI - fabs(d->qpos[1] - PI))*((PI - d->qpos[1] > 0) - (PI - d->qpos[1] < 0));
-#endif
 #if defined (CARTPOLE)
 			state[2] = (PI - fabs(d->qpos[1]))*((d->qpos[1] < 0) - (d->qpos[1] > 0));
 #endif
@@ -1565,18 +1498,12 @@ int setcontrol1(mjModel* m, mjData* d)
 			}
 			else {
 				index++;
-#if defined(FISH)
-				for (int y = 0; y < m->nq; y++)
-				{
-					if (y < 6) state_openlp[index][2 * y] = d->qpos[y];
-					else if (y > 6) state_openlp[index][2 * (y - 1)] = d->qpos[y];
-				}
-#else
+
 				for (int y = 0; y < m->nq; y++)
 				{
 					state_openlp[index][2 * y] = d->qpos[y];
 				}
-#endif
+
 				for (int y = 0; y < m->nv; y++)
 				{
 					state_openlp[index][2 * y + 1] = d->qvel[y];
@@ -1643,9 +1570,6 @@ int setcontrol2(mjModel* m, mjData* d)
 #if defined (CARTPOLE)
 			state[2] = (PI - fabs(d->qpos[1]))*((d->qpos[1] < 0) - (d->qpos[1] > 0));
 #endif
-#if defined (CART2POLE)
-			state[2] = (PI - fabs(d->qpos[1] - PI))*((PI - d->qpos[1] > 0) - (PI - d->qpos[1] < 0));
-#endif 
 			for (int y = 0; y < m->nv; y++)
 			{
 				state[2 * y + 1] = d->qvel[y] - x_goal[2 * y + 1];
@@ -1763,9 +1687,6 @@ mjtNum fcost(mjModel* m, mjData* d, mjtNum ptb)
 		state[2] = (PI - fabs(d->qpos[1]))*((d->qpos[1] < 0) - (d->qpos[1] > 0));
 		//sum += 200 * state[0] * state[0] + 100 * state[1] * state[1] + 500 * state[2] * state[2] + 100 * state[3] * state[3];
 		sum += sqrt(state[0] * state[0] + state[1] * state[1] + state[2] * state[2] + state[3] * state[3]);
-#elif defined (CART2POLE)
-		state[2] = (PI - fabs(d->qpos[1] - PI))*((PI - d->qpos[1] > 0) - (PI - d->qpos[1] < 0));
-		sum += sqrt(state[0] * state[0] + state[1] * state[1] + state[2] * state[2] + state[3] * state[3] + state[4] * state[4] + state[5] * state[5]);
 #elif defined (SWIMMER3)
 		//sum += 200*(d->geom_xpos[6] - 0.6) * (d->geom_xpos[6] - 0.6) + 100*(d->geom_xpos[7] + 0.6) * (d->geom_xpos[7] + 0.6);
 		sum += sqrt((d->geom_xpos[6] - 0.6) * (d->geom_xpos[6] - 0.6) + (d->geom_xpos[7] + 0.6) * (d->geom_xpos[7] + 0.6));
@@ -2714,15 +2635,10 @@ int wWinMain(int argc, const char** argv)
 
 	if (TOP_FLAG == true)
 	{
-		#if defined(CART3POLE)||defined(CART7POLE)
-				state_nominal[0][2] = PI;
-		#elif defined(PENDULUM)||defined(CART2POLE)
+		#if defined(PENDULUM)
 				state_nominal[0][0] = 2 * PI + ptb_coef * ulim * gaussrand();
 		#elif defined(CARTPOLE)
 				state_nominal[0][2] = -PI + ptb_coef * ulim * gaussrand();
-		#elif defined(ACROBOT)
-				state_nominal[0][0] = 0;
-				state_nominal[0][2] = -2*PI;
 		#endif
 	}
 
