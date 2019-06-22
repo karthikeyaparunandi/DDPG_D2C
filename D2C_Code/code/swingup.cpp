@@ -3,7 +3,9 @@
 //  Written by Emo Todorov         //
 //  Copyright (C) 2017 Roboti LLC  //
 //---------------------------------//
-
+//  Ran Wang from EDPLab@TAMU      //
+//  added the D2C testing code     //
+//---------------------------------//
 
 #include "mujoco.h"
 #include "mjxmacro.h"
@@ -18,7 +20,7 @@ using namespace std;
 
 //-------------------------------- macro variables --------------------------------------
 
-// model selection: PENDULUM CARTPOLE CART2POLE CART3POLE CART7POLE ACROBOT FISH SWIMMER6 SWIMMER3
+// model selection: PENDULUM CARTPOLE FISH SWIMMER6 SWIMMER3 CHEETAH
 #define FISH
 #define CTRL_LIMITTED false
 #define LOCAL true
@@ -58,36 +60,6 @@ const int ctrl_num = 5;
 const int NS = 27;
 mjtNum state_init[NS] = { 0.0, 0.0, 0, 0, 0, 0, 1, 0, 0 };
 mjtNum x_goal[NS] = { 0 };
-#elif defined(CART2POLE)
-const mjtNum t_step = 0.05;
-const int step_max = 120;
-const int roll_max = 600;
-const int ctrl_num = 1;
-const int NS = 6;
-mjtNum state_init[NS] = { 0.0, 0, PI};
-// top is 0
-mjtNum x_goal[NS] = {
-	(mjtNum)(0),
-	(mjtNum)(0),
-	(mjtNum)(0),
-	(mjtNum)(0),
-	(mjtNum)(0),
-	(mjtNum)(0),
-};
-#elif defined(ACROBOT)
-const mjtNum t_step = 0.01;
-const int step_max = 800;
-const int roll_max = 1500;
-const int ctrl_num = 1;
-const int NS = 4;
-mjtNum state_init[NS] = { PI, 0.0, 0, 0 };
-// top is 0
-mjtNum x_goal[NS] = {
-	(mjtNum)(0),
-	(mjtNum)(0),
-	(mjtNum)(0),
-	(mjtNum)(0),
-};
 #elif defined(PENDULUM)
 const mjtNum t_step = 0.1;
 const int step_max = 30;
