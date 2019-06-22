@@ -3,7 +3,9 @@
 //  Written by Emo Todorov         //
 //  Copyright (C) 2017 Roboti LLC  //
 //---------------------------------//
-
+//  Ran Wang from EDPLab@TAMU      //
+//  added the D2C testing code     //
+//---------------------------------//
 
 #include "mujoco.h"
 #include <stdlib.h>
@@ -16,7 +18,7 @@
 using namespace std;
 //-------------------------------- macro variables --------------------------------------
 
-// model selection: PENDULUM CARTPOLE CART2POLE CART3POLE SWIMMER3 SWIMMER6
+// model selection: PENDULUM CARTPOLE SWIMMER3 SWIMMER6
 #define SWIMMER6
 #define CTRL_LIMITTED false
 #define STATE_LINEAR false
@@ -27,17 +29,17 @@ using namespace std;
 
 // user customized parameters
 #if defined(SWIMMER6)
-const mjtNum t_step = 0.01;//0.006
-const mjtNum cal_step = 0.01;
+const mjtNum t_step = 0.006;//0.01;0.01;900
+const mjtNum cal_step = 0.006;
 const mjtNum ptb_coef = 0.008;
-const int step_max = 900;//1500
+const int step_max = 1500;
 const int32_t roll_max = 1400;
 const char* mname = "swimmer6.xml";
 const int ctrl_num = 5;
 const int NS = 16;
 mjtNum state_nominal[step_max + 1][NS] = { 0 };
 #elif defined(SWIMMER3)
-const mjtNum t_step = 0.005;
+const mjtNum t_step = 0.005;//0.01;0.01;800
 const mjtNum cal_step = 0.005;
 const mjtNum ptb_coef = 0.006;
 const int step_max = 1600;
@@ -46,42 +48,6 @@ const char* mname = "swimmer3.xml";
 const int ctrl_num = 2;
 const int NS = 10;
 mjtNum state_nominal[step_max + 1][NS] = { 0 };
-#elif defined(CART2POLE)
-const mjtNum t_step = 0.05;
-const int32_t roll_max = 20000; //2w
-const char* mname = "cart2pole.xml";
-const int step_max = 120;
-const int ctrl_num = 1;
-const int NS = 6;
-mjtNum ptb_coef = 0.04;
-mjtNum state_nominal[step_max + 1][NS] = { 0 };
-#elif defined(CART7POLE)
-const mjtNum t_step = 0.1;
-const mjtNum ptb_coef = 1;
-const int step_max = 100;
-const int32_t roll_max = 20000;
-const char* mname = "cart7pole.xml";
-const int ctrl_num = 1;
-const int NS = 16;
-mjtNum state_nominal[step_max + 1][NS] = { 0 };
-#elif defined(CART3POLE)
-const mjtNum t_step = 0.05;
-const mjtNum ptb_coef = 0;
-const int step_max = 140;
-const int32_t roll_max = 20000;
-const char* mname = "cart3pole.xml";
-const int ctrl_num = 1;
-const int NS = 8;
-mjtNum state_nominal[step_max + 1][NS] = { 0 };
-#elif defined(ACROBOT)
-const mjtNum t_step = 0.01;
-const mjtNum ptb_coef = 0.02;
-const int step_max = 700;
-const int32_t roll_max = 20000;
-const char* mname = "acrobot.xml";
-const int ctrl_num = 1;
-const int NS = 4;
-mjtNum state_nominal[step_max + 1][NS] = { -PI, 0, 0, 0 };
 #elif defined(PENDULUM)
 const mjtNum t_step = 0.1;
 const mjtNum cal_step = 0.1;
@@ -543,15 +509,10 @@ int main(int argc, const char** argv)
 
 	if (STATE_LINEAR == true)
 	{
-		#if defined(CART2POLE)||defined(CART3POLE)||defined(CART7POLE)
-				state_nominal[0][2] = PI;
-		#elif defined(PENDULUM)
+		#if defined(PENDULUM)
 				state_nominal[0][0] = 0;
 		#elif defined(CARTPOLE)
 				state_nominal[0][2] = -PI;
-		#elif defined(ACROBOT)
-				state_nominal[0][0] = 0;
-				state_nominal[0][2] = -2 * PI;
 		#endif
 	}
 
