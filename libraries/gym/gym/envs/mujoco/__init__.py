@@ -19,4 +19,6 @@ from gym.envs.mujoco.swimmer_6 import Swimmer6Env
 from gym.envs.mujoco.fish import FishEnv
 from gym.envs.mujoco.cart2pole import Cart2PoleEnv
 from gym.envs.mujoco.cart3pole import Cart3PoleEnv
+from gym.envs.mujoco.acrobot import AcrobotEnv
 
+#from gym.envs.mujoco.cheetah  import CheetahEnv

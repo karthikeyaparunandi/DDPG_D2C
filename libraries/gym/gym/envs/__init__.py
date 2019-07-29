@@ -255,7 +255,7 @@ register(
 register(
     id='HalfCheetah-v2',
     entry_point='gym.envs.mujoco:HalfCheetahEnv',
-    max_episode_steps=1000,
+    max_episode_steps=100000,
     reward_threshold=4800.0,
 )
 
@@ -297,7 +297,17 @@ register(
     entry_point='gym.envs.mujoco:HumanoidStandupEnv',
     max_episode_steps=1000,
 )
-
+register(
+    id='Fish-v2',
+    entry_point='gym.envs.mujoco:FishEnv',
+    max_episode_steps=3000,
+    reward_threshold=360.0,
+)
+register(
+    id='Acrobot-v2',
+    entry_point='gym.envs.mujoco:AcrobotEnv',
+    max_episode_steps=5000,
+)
 # Robotics
 # ----------------------------------------
 

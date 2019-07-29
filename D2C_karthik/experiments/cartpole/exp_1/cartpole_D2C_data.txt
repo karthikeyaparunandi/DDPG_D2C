@@ -1,0 +1,192 @@
+D2C training performed for an inverted cartpole task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+D2C training performed for an inverted cartpole task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+D2C training performed for an inverted cartpole task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+D2C training performed for an inverted cartpole task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+D2C training performed for an inverted cartpole task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 0.14106297492980957,
+Time to compute feedback:0.09459710121154785,
+Total time taken: 0.23566007614135742
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted cartpole task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 7.932070016860962,
+Time to compute feedback:0.08469438552856445,
+Total time taken: 8.016764402389526
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted cartpole task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 15.597205877304077,
+Time to compute feedback:0.08721137046813965,
+Total time taken: 15.684417247772217
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted cartpole task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 13.393748044967651,
+Time to compute feedback:0.08660197257995605,
+Total time taken: 13.480350017547607
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted cartpole task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 21.22173762321472,
+Time to compute feedback:0.08852720260620117,
+Total time taken: 21.310264825820923
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted cartpole task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+D2C training performed for an inverted cartpole task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 38.889644145965576,
+Time to compute feedback:0.08861994743347168,
+Total time taken: 38.97826409339905
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted cartpole task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 23.61254572868347,
+Time to compute feedback:0.08512353897094727,
+Total time taken: 23.69766926765442
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted cartpole task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 37.27382469177246,
+Time to compute feedback:0.08307790756225586,
+Total time taken: 37.35690259933472
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted cartpole task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+D2C training performed for an inverted cartpole task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 18.38817524909973,
+Time to compute feedback:0.09241843223571777,
+Total time taken: 18.48059368133545
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted cartpole task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 66.27088260650635,
+Time to compute feedback:0.0897676944732666,
+Total time taken: 66.36065030097961
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted cartpole task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 39.21195101737976,
+Time to compute feedback:0.09009218215942383,
+Total time taken: 39.302043199539185
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted cartpole task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+D2C training performed for an inverted cartpole task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 96.31118416786194,
+Time to compute feedback:0.0892038345336914,
+Total time taken: 96.40038800239563
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted cartpole task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 119.43390703201294,
+Time to compute feedback:0.08639717102050781,
+Total time taken: 119.52030420303345
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted cartpole task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 106.12224793434143,
+Time to compute feedback:0.1358785629272461,
+Total time taken: 106.25812649726868
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted cartpole task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 273.87572288513184,
+Time to compute feedback:0.0985724925994873,
+Total time taken: 273.9742953777313
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted cartpole task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+D2C training performed for an inverted cartpole task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 290.62875151634216,
+Time to compute feedback:0.12348198890686035,
+Total time taken: 290.752233505249
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted cartpole task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 70.6022698879242,
+Time to compute feedback:0.08922958374023438,
+Total time taken: 70.69149947166443
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted cartpole task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 2.1005871295928955,
+Time to compute feedback:0.09423184394836426,
+Total time taken: 2.1948189735412598
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted cartpole task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 47.04364800453186,
+Time to compute feedback:0.08487296104431152,
+Total time taken: 47.12852096557617
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted cartpole task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 334.8598062992096,
+Time to compute feedback:0.08668828010559082,
+Total time taken: 334.9464945793152
+------------------------------------------------------------------------------------------------------------------------------------

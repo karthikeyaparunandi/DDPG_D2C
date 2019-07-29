@@ -1,0 +1,12 @@
+D2C training performed for an inverted swimmer6 task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+D2C training performed for an inverted swimmer6 task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 361.8725817203522,
+Time to compute feedback:5.548836708068848,
+Total time taken: 367.421418428421
+------------------------------------------------------------------------------------------------------------------------------------

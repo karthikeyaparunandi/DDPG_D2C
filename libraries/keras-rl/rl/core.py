@@ -247,10 +247,7 @@ class Agent(object):
 
         return history
 
-    def test(self, env, nb_episodes=1, action_repetition=1, callbacks=None, visualize=True,
-             nb_max_episode_steps=None, nb_max_start_steps=0, start_step_policy=None, verbose=1, std_dev_noise=0, gamma=1.0,initial_state=None):
-        """Callback that is called before training begins.
-
+    def test(self,
         # Arguments
             env: (`Env` instance): Environment that the agent interacts with. See [Env](#env) for details.
             nb_episodes (integer): Number of episodes to perform.

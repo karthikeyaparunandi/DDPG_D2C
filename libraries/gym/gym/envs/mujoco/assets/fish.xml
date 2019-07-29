@@ -5,17 +5,17 @@
       <texture name="skybox" type="skybox" builtin="gradient" rgb1=".4 .6 .8" rgb2="0 0 0" width="800" height="800" mark="random" markrgb="1 1 1"/>
   </asset>
 
-
-  <option timestep="0.005" density="5000">
+  <option timestep="0.002" density="5000">
     <flag gravity="disable" constraint="disable"/>
   </option>
 
   <default>
     <general ctrllimited="false"/>
     <default class="fish">
-      <joint type="hinge" limited="true" range="-60 60" damping="2e-5" solreflimit=".1 1" solimplimit="0 .8 .1"/>
-      <geom material="self"/>
+        <joint type="hinge" limited="false" range="-60 60" damping="2e-5" solreflimit=".1 1" solimplimit="0 .8 .1" armature="1e-6"/>
+        <geom material="self"/>
     </default>
+    <motor gear="5e-4" ctrllimited="false"/>
   </default>
 
   <worldbody>
@@ -58,7 +58,7 @@
     </body>
   </worldbody>
 
-  <tendon>
+  <!--tendon>
     <fixed name="fins_flap">
       <joint joint="finleft_roll"  coef="-.5"/>
       <joint joint="finright_roll" coef=".5"/>
@@ -67,19 +67,19 @@
       <joint joint="finleft_roll"  coef=".5"/>
       <joint joint="finright_roll" coef=".5"/>
     </fixed>
-  </tendon>
+  </tendon-->
 
   <actuator>
-    <position name="tail"           joint="tail1"           ctrlrange="-100 100"    kp="5e-4"/>
-    <position name="tail_twist"     joint="tail_twist"      ctrlrange="-100 100"    kp="1e-4"/>
-    <position name="fins_flap"      tendon="fins_flap"      ctrlrange="-100 100"    kp="3e-4"/>
-    <position name="finleft_pitch"  joint="finleft_pitch"   ctrlrange="-100 100"    kp="1e-4"/>
-    <position name="finright_pitch" joint="finright_pitch"  ctrlrange="-100 100"    kp="1e-4"/>
+    <motor name="tail"           joint="tail1"           ctrlrange="-100 100"/>
+    <motor name="tail_twist"     joint="tail_twist"      ctrlrange="-100 100"/>
+    <motor name="finleft_flap"   joint="finleft_roll"    ctrlrange="-100 100"/>
+    <motor name="finright_flap"  joint="finright_roll"   ctrlrange="-100 100"/>
+    <motor name="finleft_pitch"  joint="finleft_pitch"   ctrlrange="-100 100"/>
+    <motor name="finright_pitch" joint="finright_pitch"  ctrlrange="-100 100"/>
   </actuator>
 
-  <sensor>
+  <!--sensor>
     <velocimeter name="velocimeter" site="torso"/>
     <gyro name="gyro" site="torso"/>
-  </sensor>
+  </sensor-->
 </mujoco>
-

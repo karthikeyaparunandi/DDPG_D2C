@@ -1,0 +1,28 @@
+D2C training performed for an inverted swimmer task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+D2C training performed for an inverted swimmer task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+D2C training performed for an inverted swimmer task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+D2C training performed for an inverted swimmer task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 147.92445588111877,
+Time to compute feedback:5.073169946670532,
+Total time taken: 152.9976258277893
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted swimmer task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 261.34791803359985,
+Time to compute feedback:4.652311325073242,
+Total time taken: 266.0002293586731
+------------------------------------------------------------------------------------------------------------------------------------

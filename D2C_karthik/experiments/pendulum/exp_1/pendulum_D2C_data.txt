@@ -1,0 +1,518 @@
+This experiment is conducted on System details : posix.uname_result(sysname='Linux', nodename='chak-res-a', release='4.15.0-54-generic', version='#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019', machine='x86_64')Time to compute open-loop: 93.4307930469513 , 
+ Time to compute feedback:0.07636427879333496 ,
+ Total time taken: 93.50715732574463D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 88.73620891571045, 
+ Time to compute feedback:0.075286865234375, 
+ Total time taken: 88.81149578094482
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 60.55281710624695,
+Time to compute feedback:0.0778799057006836,
+Total time taken: 60.63069701194763
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 42.87411093711853,
+Time to compute feedback:0.07978677749633789,
+Total time taken: 42.95389771461487
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 4.0967864990234375,
+Time to compute feedback:0.08354377746582031,
+Total time taken: 4.180330276489258
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 2.736644983291626,
+Time to compute feedback:0.08267474174499512,
+Total time taken: 2.819319725036621
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 3.564311981201172,
+Time to compute feedback:0.07847237586975098,
+Total time taken: 3.642784357070923
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 7.861384630203247,
+Time to compute feedback:0.07778549194335938,
+Total time taken: 7.9391701221466064
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 1.4423267841339111,
+Time to compute feedback:0.07696723937988281,
+Total time taken: 1.519294023513794
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 1.7036821842193604,
+Time to compute feedback:0.07839322090148926,
+Total time taken: 1.7820754051208496
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 1.2881808280944824,
+Time to compute feedback:0.0786590576171875,
+Total time taken: 1.36683988571167
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 0.8782835006713867,
+Time to compute feedback:0.07777905464172363,
+Total time taken: 0.9560625553131104
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 1.905808687210083,
+Time to compute feedback:0.07788920402526855,
+Total time taken: 1.9836978912353516
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 0.7997019290924072,
+Time to compute feedback:0.07878661155700684,
+Total time taken: 0.8784885406494141
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 5.38127875328064,
+Time to compute feedback:0.07650327682495117,
+Total time taken: 5.457782030105591
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 1.3031365871429443,
+Time to compute feedback:0.07759284973144531,
+Total time taken: 1.3807294368743896
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 3.912874937057495,
+Time to compute feedback:0.07958698272705078,
+Total time taken: 3.992461919784546
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 2.062993288040161,
+Time to compute feedback:0.07906341552734375,
+Total time taken: 2.142056703567505
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 2.292213201522827,
+Time to compute feedback:0.08718419075012207,
+Total time taken: 2.379397392272949
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 6.640024185180664,
+Time to compute feedback:0.08042240142822266,
+Total time taken: 6.720446586608887
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 1.0962226390838623,
+Time to compute feedback:0.08090662956237793,
+Total time taken: 1.1771292686462402
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 65.0247449874878,
+Time to compute feedback:0.07938098907470703,
+Total time taken: 65.1041259765625
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 2.9670615196228027,
+Time to compute feedback:0.0779273509979248,
+Total time taken: 3.0449888706207275
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 1.5447523593902588,
+Time to compute feedback:0.07606983184814453,
+Total time taken: 1.6208221912384033
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 2.862349271774292,
+Time to compute feedback:0.08263564109802246,
+Total time taken: 2.9449849128723145
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 2.7731070518493652,
+Time to compute feedback:0.07985997200012207,
+Total time taken: 2.8529670238494873
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 1.9934656620025635,
+Time to compute feedback:0.0792539119720459,
+Total time taken: 2.0727195739746094
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 0.28041958808898926,
+Time to compute feedback:0.0756387710571289,
+Total time taken: 0.35605835914611816
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 0.9688615798950195,
+Time to compute feedback:0.07817745208740234,
+Total time taken: 1.0470390319824219
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 2.6340107917785645,
+Time to compute feedback:0.09645247459411621,
+Total time taken: 2.7304632663726807
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 0.9387962818145752,
+Time to compute feedback:0.07794547080993652,
+Total time taken: 1.0167417526245117
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 1.5134000778198242,
+Time to compute feedback:0.07730340957641602,
+Total time taken: 1.5907034873962402
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 1.753627061843872,
+Time to compute feedback:0.07887506484985352,
+Total time taken: 1.8325021266937256
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 61.12086486816406,
+Time to compute feedback:0.0883791446685791,
+Total time taken: 61.20924401283264
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 0.13840317726135254,
+Time to compute feedback:0.0794687271118164,
+Total time taken: 0.21787190437316895
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 1.2534856796264648,
+Time to compute feedback:0.07581043243408203,
+Total time taken: 1.3292961120605469
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 0.9348006248474121,
+Time to compute feedback:0.0819401741027832,
+Total time taken: 1.0167407989501953
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 0.8244152069091797,
+Time to compute feedback:0.08102059364318848,
+Total time taken: 0.9054358005523682
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 3.677069664001465,
+Time to compute feedback:0.08229517936706543,
+Total time taken: 3.7593648433685303
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 3.7413394451141357,
+Time to compute feedback:0.08799076080322266,
+Total time taken: 3.8293302059173584
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 2.463167190551758,
+Time to compute feedback:0.08820152282714844,
+Total time taken: 2.5513687133789062
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 357.71037578582764,
+Time to compute feedback:0.0772545337677002,
+Total time taken: 357.78763031959534
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 169.7113893032074,
+Time to compute feedback:0.0748751163482666,
+Total time taken: 169.78626441955566
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 3.4254915714263916,
+Time to compute feedback:0.07634925842285156,
+Total time taken: 3.501840829849243
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 2.185818910598755,
+Time to compute feedback:0.08439874649047852,
+Total time taken: 2.2702176570892334
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 11.89057731628418,
+Time to compute feedback:0.07853174209594727,
+Total time taken: 11.969109058380127
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 8.330099821090698,
+Time to compute feedback:0.0813901424407959,
+Total time taken: 8.411489963531494
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 4.8496458530426025,
+Time to compute feedback:0.09037017822265625,
+Total time taken: 4.940016031265259
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 4.776262521743774,
+Time to compute feedback:0.08462762832641602,
+Total time taken: 4.86089015007019
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 4.361081123352051,
+Time to compute feedback:0.0800626277923584,
+Total time taken: 4.441143751144409
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 1.939178466796875,
+Time to compute feedback:0.08174395561218262,
+Total time taken: 2.0209224224090576
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 3.806884288787842,
+Time to compute feedback:0.07842874526977539,
+Total time taken: 3.885313034057617
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 9.600144386291504,
+Time to compute feedback:0.09381318092346191,
+Total time taken: 9.693957567214966
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 1.5090630054473877,
+Time to compute feedback:0.07990264892578125,
+Total time taken: 1.588965654373169
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 39.632155656814575,
+Time to compute feedback:0.0760810375213623,
+Total time taken: 39.70823669433594
+------------------------------------------------------------------------------------------------------------------------------------
+D2C training performed for an inverted pendulum task:
+
+System details : Linux--chak-res-a--4.15.0-54-generic--#58~16.04.1-Ubuntu SMP Mon Jun 24 13:21:41 UTC 2019--x86_64
+-------------------------------------------------------------
+Time to compute open-loop: 38.90811610221863,
+Time to compute feedback:0.07821464538574219,
+Total time taken: 38.98633074760437
+------------------------------------------------------------------------------------------------------------------------------------

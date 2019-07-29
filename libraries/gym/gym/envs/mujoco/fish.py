@@ -5,7 +5,7 @@ from gym.envs.mujoco import mujoco_env
 class FishEnv(mujoco_env.MujocoEnv, utils.EzPickle):
     def __init__(self):
 
-        mujoco_env.MujocoEnv.__init__(self, 'fish.xml', 1, np.array([0,0,0,1,0,0,0,0,0,0,0,0,0,0]), np.zeros((13,)))
+        mujoco_env.MujocoEnv.__init__(self, 'fish_old.xml', 1, np.array([0,0,0,1,0,0,0,0,0,0,0,0,0,0]), np.zeros((13,)))
         utils.EzPickle.__init__(self)
 
     def step(self, a):

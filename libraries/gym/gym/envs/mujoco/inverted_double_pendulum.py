@@ -5,7 +5,7 @@ from gym.envs.mujoco import mujoco_env
 class InvertedDoublePendulumEnv(mujoco_env.MujocoEnv, utils.EzPickle):
 
     def __init__(self):
-        mujoco_env.MujocoEnv.__init__(self, 'inverted_double_pendulum.xml', 5)
+        mujoco_env.MujocoEnv.__init__(self, 'inverted_double_pendulum.xml', 1, np.array([0, 0, 0]), np.array([0, 0, 0]))
         utils.EzPickle.__init__(self)
 
     def step(self, action):
@@ -21,18 +21,19 @@ class InvertedDoublePendulumEnv(mujoco_env.MujocoEnv, utils.EzPickle):
         return ob, r, done, {}
 
     def _get_obs(self):
-        return np.concatenate([
-            self.sim.data.qpos[:1],  # cart x pos
-            np.sin(self.sim.data.qpos[1:]),  # link angles
-            np.cos(self.sim.data.qpos[1:]),
-            np.clip(self.sim.data.qvel, -10, 10),
-            np.clip(self.sim.data.qfrc_constraint, -10, 10)
-        ]).ravel()
+        return np.concatenate([self.sim.data.qpos, self.sim.data.qvel])
+        # np.concatenate([
+        #     self.sim.data.qpos[:1],  # cart x pos
+        #     np.sin(self.sim.data.qpos[1:]),  # link angles
+        #     np.cos(self.sim.data.qpos[1:]),
+        #     np.clip(self.sim.data.qvel, -10, 10),
+        #     np.clip(self.sim.data.qfrc_constraint, -10, 10)
+        # ]).ravel()
 
     def reset_model(self):
         self.set_state(
-            self.init_qpos + self.np_random.uniform(low=-.1, high=.1, size=self.model.nq),
-            self.init_qvel + self.np_random.randn(self.model.nv) * .1
+            self.init_qpos, #+ self.np_random.uniform(low=-.1, high=.1, size=self.model.nq),
+            self.init_qvel #+ self.np_random.randn(self.model.nv) * .1
         )
         return self._get_obs()
 
