@@ -10,8 +10,6 @@ from scipy.stats import bernoulli
 import matplotlib.pyplot as plt
 import json
 
-#import math
-
 class D2C_class():
 
 	def __init__(self, state_dimension, control_dimension, model_xml_string, horizon, lr_0, lr_schedule_k, ctrl_state_freq_ratio=1):
@@ -113,11 +111,8 @@ class D2C_class():
 			#ck = c / (j + 1)**gamma
 			#del_u = ck*(2*bernoulli.rvs(size=control_traj_j_shape, p=0.5)-1)
 			control_traj_j_f = U_nominal_prev + del_u
-			#control_traj_j_b = U_nominal_prev - del_u
-			
 			state_traj_j_f = 	self.forward_pass_sim(control_traj_j_f, horizon)
-			#state_traj_j_b = 	self.forward_pass_sim(control_traj_j_b, horizon)
-
+			
 			# using central differnce formula to update the sample gradient
 			#print((del_u @ del_u.T)/sigma_del_u**2)
 			del_J_next = (1 - (1/(j+1))) * del_J + (1/((j + 1)*(sigma_del_u**2)*control_dim))*(self.episodic_cost(state_traj_j_f, control_traj_j_f, Q, \
@@ -126,9 +121,6 @@ class D2C_class():
 			# del_J_next = (1 - (1/(j+1))) * del_J + (1/((j + 1) *control_traj_j_shape[1]))*(self.episodic_cost(state_traj_j_f, control_traj_j_f, Q, \
 			# 												Q_terminal, R, horizon, goal_state) - self.episodic_cost(state_traj_j_b, control_traj_j_b, Q, \
 			# 												Q_terminal, R, horizon, goal_state))/(2*del_u)
-			# print(self.episodic_cost(state_traj_j_f, control_traj_j_f, Q, \
-			# 												Q_terminal, R, horizon, goal_state) - self.episodic_cost(state_traj_j_b, control_traj_j_b, Q, \
-			# 												Q_terminal, R, horizon, goal_state), del_u)
 			# Processes = []
 			# q = Queue()
 			# for kth_process in range(self.n_processes):								
@@ -179,6 +171,7 @@ class D2C_class():
 
 	def episodic_cost(self, trajectory_states, trajectory_controls, Q, Q_terminal, R, horizon, goal_state, multiprocess_flag=0):
 		# calculates the episodic cost given the trajectory variables
+		
 		if multiprocess_flag:
 			episodic_cost_partial = np.zeros((self.n_processes, 1))
 			episodic_cost = 0
